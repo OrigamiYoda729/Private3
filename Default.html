@@ -1,15 +1,29 @@
-<!DOCTYPE html>
-<html><head id="ctl00_ctl00_Head1">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+<!doctype html>
+<html>
+<head id="ctl00_ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
 	Grades
 </title>
     <link rel="shortcut icon" href="https://grades.leonschools.net/Pinnacle/Gradebook/Images/favicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-<script src="Grades_files/jquery"></script>
-<script src="Grades_files/bootstrap"></script>
+<script src="./Default_files/jquery"></script>
+<script src="./Default_files/bootstrap"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>jQuery.noConflict();</script>
+	<script type="text/javascript" src="./Default_files/Common.js.download"></script>
+<script type="text/javascript" src="./Default_files/Event.js.download"></script>
+<script type="text/javascript" src="./Default_files/Json.js.download"></script>
+<script type="text/javascript" src="./Default_files/Effect.js.download"></script>
+<script type="text/javascript" src="./Default_files/TabBar.js.download"></script>
+<script type="text/javascript" src="./Default_files/Dialog.js.download"></script>
+<script type="text/javascript" src="./Default_files/Search.js.download"></script>
+<script type="text/javascript" src="./Default_files/Watermark.js.download"></script>
+<script type="text/javascript" src="./Default_files/AdvancedSearch.js.download"></script>
+<script type="text/javascript" src="./Default_files/IconSwitcher.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./Default_files/Search.css">
+<script type="text/javascript" src="./Default_files/Search.js(1).download"></script>
+<script type="text/javascript" src="./Default_files/Header.js.download"></script>
 
     <script type="text/javascript">
 	    var masterPrefix = "ctl00_";
@@ -17,21 +31,21 @@
 	    var rootPath = "/Pinnacle/Gradebook/";
     </script>
     
-	<script type="text/javascript" src="Grades_files/InternetViewer.js"></script>
+	<script type="text/javascript" src="./Default_files/InternetViewer.js.download"></script>
 
 	
-<link href="Grades_files/css.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="Grades_files/Base.css">
-<link rel="stylesheet" type="text/css" href="Grades_files/TabBar.css">
-<link rel="stylesheet" type="text/css" href="Grades_files/Main.css">
-<link rel="stylesheet" type="text/css" href="Grades_files/Form.css">
-<link rel="stylesheet" type="text/css" href="Grades_files/Header.css">
-<link rel="stylesheet" type="text/css" href="Grades_files/Nav.css">
-<link rel="stylesheet" type="text/css" href="Grades_files/Dialog.css">
+<link href="./Default_files/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./Default_files/Base.css">
+<link rel="stylesheet" type="text/css" href="./Default_files/TabBar.css">
+<link rel="stylesheet" type="text/css" href="./Default_files/Main.css">
+<link rel="stylesheet" type="text/css" href="./Default_files/Form.css">
+<link rel="stylesheet" type="text/css" href="./Default_files/Header.css">
+<link rel="stylesheet" type="text/css" href="./Default_files/Nav.css">
+<link rel="stylesheet" type="text/css" href="./Default_files/Dialog.css">
 
-	<link rel="stylesheet" type="text/css" href="Grades_files/InternetViewer.css">
+	<link rel="stylesheet" type="text/css" href="./Default_files/InternetViewer.css">
 
-	<link rel="stylesheet" type="text/css" href="Grades_files/IVReports.css">
+	<link rel="stylesheet" type="text/css" href="./Default_files/IVReports.css">
 
 	
 	<style type="text/css">
@@ -118,12 +132,12 @@
 		}
 	</style>
 
-<link rel="stylesheet" type="text/css" href="Grades_files/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="./Default_files/font-awesome.min.css">
 </head>
 <body>
-    <form method="post" action="./GradeReport.html" id="aspnetForm" class="mainForm">
+    <form method="post" action="https://grades.leonschools.net/Pinnacle/Gradebook/InternetViewer/GradeReport.aspx" id="aspnetForm" class="mainForm">
 <div class="aspNetHidden">
-<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4NzI3NDc4OTYPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCZg9kFgJmD2QWAgIDD2QWBAIBD2QWAmYPFgIeBXN0eWxlBQxoZWlnaHQ6NTVweDsWBmYPFgIfAQVNdGV4dC1pbmRlbnQ6LTk5OXB4O2JhY2tncm91bmQtaW1hZ2U6dXJsKC4uL0JyYW5kaW5nL0xDU0JfSGVhZGVyTG9nb19CbGsucG5nKTtkAgMPFgIeB1Zpc2libGVoZAIEDxYCHgRocmVmBWZodHRwOi8vZ2JoZWxwLndhenpsZXNvbHV0aW9ucy5jb20vP3ZlcnNpb249MTYuOC4xNzMzNC4xJmN1c3RvbWVySWQ9MTEyNzYyNCZyb2xlPVRlYWNoZXImdXNlcj0xNzEwNTMwMTVkAgIPDxYCHwJoZGRkZz13fxCJseENaj7P+UaMkcKMopY=" type="hidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4NzI3NDc4OTYPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCZg9kFgJmD2QWAgIDD2QWBAIBD2QWAmYPFgIeBXN0eWxlBQxoZWlnaHQ6NTVweDsWBmYPFgIfAQVNdGV4dC1pbmRlbnQ6LTk5OXB4O2JhY2tncm91bmQtaW1hZ2U6dXJsKC4uL0JyYW5kaW5nL0xDU0JfSGVhZGVyTG9nb19CbGsucG5nKTtkAgMPFgIeB1Zpc2libGVoZAIEDxYCHgRocmVmBWhodHRwOi8vZ2JoZWxwLndhenpsZXNvbHV0aW9ucy5jb20vP3ZlcnNpb249MTYuOC4xNzMzNC4xJmN1c3RvbWVySWQ9MTEyNzYyNCZyb2xlPVRlYWNoZXImdXNlcj1maW5nZXJqMzAxNWQCAg8PFgIfAmhkZGSXZ8vftZns34j5Im8gCJ+XiBNZ9A==">
 </div>
 
 
@@ -134,10 +148,10 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 
 <div class="aspNetHidden">
 
-	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AE12C7A5" type="hidden">
-	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAMDmkGK6LkLnTOEzlikia1WtebAYtBK+g9NUDmf8g8/ivHVLV9dlQchjB1VdJfRe4OJBYUuOtn/33KTdR1184rdL57wIA==" type="hidden">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AE12C7A5">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAPqTku561d0PQd/FHCSPE+XtebAYtBK+g9NUDmf8g8/ivHVLV9dlQchjB1VdJfRe4NWxM0nRj3TOB7YlCXDsa9gx8FQvg==">
 </div>
-	    <input name="ctl00$ctl00$uxStudentId" id="ctl00_ctl00_uxStudentId" value="53684" type="hidden">
+	    <input name="ctl00$ctl00$uxStudentId" type="hidden" id="ctl00_ctl00_uxStudentId" value="53684">
         
 
 <script type="text/javascript">
@@ -224,16 +238,16 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 <header id="header" data-mobile="false" class="logo-hidden">
 	<div id="logoRow" class="text-center visible-xs-block">
 		
-			<img class="center-block" src="Grades_files/LCSB_HeaderLogo_Blk.png">
+			<img class="center-block" src="./Default_files/LCSB_HeaderLogo_Blk.png">
 		
 	</div>
 
 	<div id="ctl00_ctl00_PageHeader_headerBar" class="TopBar" style="height:55px;">
 		
-			<a class="button-menu visible-xs-inline-block" href="#menu">
+			<a class="button-menu visible-xs-inline-block" href="https://grades.leonschools.net/Pinnacle/Gradebook/InternetViewer/GradeReport.aspx#menu">
 				<span>Menu</span>
 			</a>
-		<h1 id="ctl00_ctl00_PageHeader_uxLogo" class="hidden-xs" style="text-indent:-999px;background-image:url(../Branding/LCSB_HeaderLogo_Blk.png);">Leon County School District</h1>
+		<h1 id="ctl00_ctl00_PageHeader_uxLogo" class="hidden-xs" style="text-indent:-999px;background-image:url(https://grades.leonschools.net/Pinnacle/Gradebook/Branding/LCSB_HeaderLogo_Blk.png);">Leon County School District</h1>
 
 		
 			<div class="TopLoginHeader">
@@ -241,7 +255,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 					<tbody><tr id="HeaderRow">
 						
 						<td>
-							<a href="logout.html">Sign out</a>
+							<a href="https://grades.leonschools.net/Pinnacle/Gradebook/Logon.aspx?Action=Logout" id="ctl00_ctl00_PageHeader_LogoutLink">Sign out</a>
 						</td>
 
 						
@@ -266,11 +280,11 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 					<div class="searchparams">
 						<div class="row">
 							<div class="form-group col-xs-12 col-sm-4">
-								<input class="form-control" id="uxSearchDialog_LastName" placeholder="Last name..." type="text">
+								<input class="form-control" id="uxSearchDialog_LastName" type="text" placeholder="Last name...">
 							</div>
 
 							<div class="form-group col-xs-12 col-sm-4">
-								<input class="form-control" id="uxSearchDialog_FirstName" placeholder="First name..." type="text">
+								<input class="form-control" id="uxSearchDialog_FirstName" type="text" placeholder="First name...">
 							</div>
 
 							<div class="form-group col-xs-12 col-sm-4">
@@ -293,19 +307,19 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 		    <div id="sideBar" class="side-bar logo-hidden" style="min-height: calc(100% - 56px);">
 			<div class="user-info">
 				<div class="media-left">
-					<a href="#">
-						<img class="media-object person-photo img-rounded" id="userPhoto" src="Grades_files/Picture.png" alt="User photo">
+					<a href="https://grades.leonschools.net/Pinnacle/Gradebook/InternetViewer/GradeReport.aspx#">
+						<img class="media-object person-photo img-rounded" id="userPhoto" src="./Default_files/Picture.ashx" alt="User photo">
 					</a>
 				</div>
 				<div class="media-body">
 					<h4 class="media-heading">
-						<span>Finger, Jeffery</span>
+						<span>Henderson, Holly</span>
 					</h4>
 				</div>
 			</div>
 			<div class="list-group menu-list">
 					<section class="">
-							<a role="button" class="list-group-item list-group-item-heading" href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/Default.html">
+							<a role="button" class="list-group-item list-group-item-heading" href="Default.html">
 										<i class="fa fa-lg fa-fw fa-home"></i>
 
 								Home
@@ -314,54 +328,72 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 
 					</section>
 					<section class="">
-							<a role="button" class="list-group-item list-group-item-heading" href="#">
-										<i class="fa fa-lg fa-fw fa-search"></i>
+							
 
-								Student Details
-
-							</a>
-
-							<div id="a33b1e149d5342cab4028d8ff6dc1bac">
+							<div id="24fd0828257347d3bc8bb727277f8a9f">
 
 
-										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/MissingAndUpcomingAssignments.html?Student=53684">Missing &amp; Upcoming Assignments</a>
-										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/GradeReport.html?Student=53684">Grades</a>
-										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/AttendanceSummary.html?Student=53684">Attendance</a>
-										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentSchedule.html?Student=53684">Schedule</a>
-										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/Demographics.html?Student=53684">Demographics</a>
-										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/Subscriptions.html?Student=53684">Notifications</a>
+										<a class="list-group-item  active" href="Default.html">Finger, Jeffery</a>
 							</div>
 					</section>
 					<section class="">
-							<a role="button" class="list-group-item list-group-item-heading" href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/Gradebook/ProfileGeneral.html">
+							<div class="user-info">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object person-photo img-rounded" id="userPhoto" src="./Default_files/Picture(1).ashx" alt="User photo">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">
+										<span>Finger, Jeffery</span>
+									</h4>
+											<span>7</span>
+
+								</div>
+							</div>
+
+							<div id="401d7c8ae8bf4e1d900451f01defbbc6">
+
+
+										<a class="list-group-item " href="https://grades.leonschools.net/Pinnacle/Gradebook/InternetViewer/MissingAndUpcomingAssignments.aspx?Student=53684">Missing &amp; Upcoming Assignments</a>
+										<a class="list-group-item " href="https://grades.leonschools.net/Pinnacle/Gradebook/InternetViewer/GradeReport.aspx?Student=53684">Grades</a>
+										
+										<a class="list-group-item " href="https://grades.leonschools.net/Pinnacle/Gradebook/InternetViewer/StudentSchedule.aspx?Student=53684">Schedule</a>
+										
+										
+							</div>
+					</section>
+					<section class="">
+							<a role="button" class="list-group-item list-group-item-heading" href="Profile.html">
 										<i class="fa fa-lg fa-fw fa-cog"></i>
 
 								Options
 
 							</a>
 
-							<div id="7d30c41e8e6b40b19393eb9779564c19">
+							<div id="3659e59b435149f09179072b0537463e">
 
 
-										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/Gradebook/ProfileGeneral.html">Edit Profile</a>
+										<a class="list-group-item " href="Profile.html">Edit Profile</a>
+										
 							</div>
 					</section>
 									<div class="list-group-item footer text-muted">
-						<div>Last login: 12/14/2017 6:47:34 PM</div>
+						<div>Last login: 1/11/2018 7:28:12 AM</div>
 						<div>Wazzle Gradebook</div>
 						<div>Copyright 2016 Wazzle Solutions, LLC. </div>
 						<div>All rights reserved.</div>
 						<div>
-							<img style="transform:scale(0.75)" src="Grades_files/CompanyLogo.png">
+							<img style="transform:scale(0.75)" src="./Default_files/CompanyLogo.png">
 						</div>
 					</div>
 			</div>
 </div>
 	        
     
-    <script type="text/javascript" src="Grades_files/jQuery.js"></script>
+    <script type="text/javascript" src="./Default_files/jQuery.Cookie.js.download"></script>
 
-    <script type="text/javascript" src="Grades_files/SessionReminder.js"></script>
+    <script type="text/javascript" src="./Default_files/SessionReminder.js.download"></script>
 
     <script type="text/javascript">
         var BasePath = '/Pinnacle/Gradebook/';
@@ -372,20 +404,20 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
         {
             $(document).ready(function()
 			{
-				reminder = new SessionReminder('sessionReminder', BasePath, PromptDelay, '14278598|97461');
+				reminder = new SessionReminder('sessionReminder', BasePath, PromptDelay, '14278879|101652');
                 reminder.start(50);
             });
         })(jQuery);
     </script>
-    <link rel="stylesheet" type="text/css" href="Grades_files/Dialog.css">
+    <link rel="stylesheet" type="text/css" href="./Default_files/Dialog.css">
 
 
 	        
 	<div>
-		<input name="ctl00$ctl00$ContentPlaceHolder$uxStudentId" id="ctl00_ctl00_ContentPlaceHolder_uxStudentId" value="53684" type="hidden">
+		<input name="ctl00$ctl00$ContentPlaceHolder$uxStudentId" type="hidden" id="ctl00_ctl00_ContentPlaceHolder_uxStudentId" value="53684">
 		<div id="ClassDetails" style="box-shadow: 0px 0px 10px #444444; display: none; overflow: auto">
 			<div class="detailMargin">
-				<img onclick="javascript:ClassDetails.close();" src="Grades_files/close_btn.gif">
+				<img onclick="javascript:ClassDetails.close();" src="./Default_files/close_btn.gif">
 				<div class="detailContent">
 					<div>
 						<div class="heading">
@@ -426,7 +458,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 						<div class="textstyle" id="narrative"></div>
 					</div>
 					<div class="closeRow">
-						<input class="button" onclick="javascript:ClassDetails.close();" value="Close" type="button">
+						<input class="button" onclick="javascript:ClassDetails.close();" type="button" value="Close">
 					</div>
 
 				</div>
@@ -465,7 +497,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 								
 								<div style="float: right">
 									
-									<a class="letter-container " href="#">
+									<a class="letter-container " href="class1.html">
 										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
 											<div>
 												<div>
@@ -483,7 +515,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 										</div>
 								<div style="float: right">
 									
-									<a class="letter-container " href="#">
+									<a class="letter-container " href="?Enrollment=3642269&amp;Term=532640">
 										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
 											<div>
 												<div>
@@ -498,7 +530,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 										<div class="letter-label">Grading Period 2</div>
 									</a>
 									
-									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments01.html?Enrollment=3642269&amp;Term=532639">
+									<a class="letter-container " href="?Enrollment=3642269&amp;Term=532639">
 										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
 											<div>
 												<div>
@@ -527,13 +559,13 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 								
 								<div style="float: right">
 									
-									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments02.html?Enrollment=3640576&amp;Term=532012">
+									<a class="letter-container " href="class2.html">
 										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
 											<div>
 												<div>
 													A
 														<span class="percent">
-															97%
+															98%
 														</span>
 													
 												</div>
@@ -566,7 +598,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 												<div>
 													B
 														<span class="percent">
-															86%
+															82%
 														</span>
 													
 												</div>
@@ -589,7 +621,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 								
 								<div style="float: right">
 									
-									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments03.html?Enrollment=3896969&amp;Term=533125">
+									<a class="letter-container " href="class3.html">
 										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
 											<div>
 												<div>
@@ -636,7 +668,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 								
 								<div style="float: right">
 									
-									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments04.html?Enrollment=3645199&amp;Term=532180">
+									<a class="letter-container " href="class4.html">
 										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
 											<div>
 												<div>
@@ -698,7 +730,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 								
 								<div style="float: right">
 									
-									<a class="letter-container " href="?Enrollment=3897693&amp;Term=531984">
+									<a class="letter-container " href="#">
 										<div class="letter" style="" title="">
 											<div>
 												<div>
@@ -727,7 +759,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 								
 								<div style="float: right">
 									
-									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments06.html?Enrollment=3896957&amp;Term=532530">
+									<a class="letter-container " href="class6.html">
 										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
 											<div>
 												<div>
@@ -875,7 +907,7 @@ var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl0
 
 			
 			<p class="report-time">
-				This report was generated on 1/14/2018 at 8:22 AM
+				This report was generated on 1/14/2018 at 10:42 AM
 			</p>
 		</div>
 	</div>
@@ -939,7 +971,7 @@ initialize();//]]>
 						$target.val("");
 						$.post(rootPath + "common/Impersonation.ashx/ClearImpersonation")
 							.done(function () {
-								document.location.href = "Default.html";
+								document.location.href = "Default.aspx";
 							});
 					});
 
@@ -951,4 +983,6 @@ initialize();//]]>
 	</script>
 
 
-<div id="sCLExtInstalled" data-version="4.20" style="display: none;">1</div></body></html>
+<div id="sCLExtInstalled" data-version="3.9" style="display: none;">1</div>
+</html>
+</body></html>
