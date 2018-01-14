@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html><head id="ctl00_ctl00_Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Grades
+</title>
+    <link rel="shortcut icon" href="https://grades.leonschools.net/Pinnacle/Gradebook/Images/favicon.png">
+    
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<script src="Grades_files/jquery"></script>
+<script src="Grades_files/bootstrap"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript">
+	    var masterPrefix = "ctl00_";
+	    var prefix = masterPrefix + "ContentPlaceHolder_";
+	    var rootPath = "/Pinnacle/Gradebook/";
+    </script>
+    
+	<script type="text/javascript" src="Grades_files/InternetViewer.js"></script>
+
+	
+<link href="Grades_files/css.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="Grades_files/Base.css">
+<link rel="stylesheet" type="text/css" href="Grades_files/TabBar.css">
+<link rel="stylesheet" type="text/css" href="Grades_files/Main.css">
+<link rel="stylesheet" type="text/css" href="Grades_files/Form.css">
+<link rel="stylesheet" type="text/css" href="Grades_files/Header.css">
+<link rel="stylesheet" type="text/css" href="Grades_files/Nav.css">
+<link rel="stylesheet" type="text/css" href="Grades_files/Dialog.css">
+
+	<link rel="stylesheet" type="text/css" href="Grades_files/InternetViewer.css">
+
+	<link rel="stylesheet" type="text/css" href="Grades_files/IVReports.css">
+
+	
+	<style type="text/css">
+		div.grid div.period
+		{
+			float: left;
+			margin-right: 0.5em;
+		}
+
+		div.grid div.row
+		{
+			border-bottom: 1px solid #DDD;
+			margin: 0;
+			overflow: hidden;
+			padding: 0.5em;
+		}
+
+		div.grid a, div.grid a:hover, div.grid a:visited
+		{
+			color: inherit;
+			text-decoration: none;
+		}
+
+		div.grid div.teacher
+		{
+			color: #888;
+		}
+
+		.heading
+		{
+			text-align: center;
+		}
+
+		div h2 span.year
+		{
+			color: #888;
+			float: right;
+		}
+
+		div.term h2
+		{
+			border-bottom: 1px solid #DDD;
+			font-weight: bold;
+			margin-top: 1em;
+			padding: 0.5em;
+		}
+
+		a.letter-container
+		{
+			float: right;
+			margin-left: 1em;
+			overflow: hidden;
+			text-align: center;
+			width: 4em;
+		}
+
+		a.letter-container:hover
+		{
+			background-color: #EEE;
+		}
+
+		div.letter-label
+		{
+			font-size: small;
+			margin-bottom: 0.5em;
+			margin-top: 0.5em;
+		}
+
+		a.letter-container.semester
+		{
+			width: 5em;
+		}
+
+		a.letter-container.semester div.letter
+		{
+			border-color: rgba(0, 0, 0, 0.1);
+			padding-bottom: 0.5em;
+			padding-top: 0.5em;
+		}
+
+		span.course
+		{
+			font-weight: bold;
+		}
+	</style>
+
+<link rel="stylesheet" type="text/css" href="Grades_files/font-awesome.css">
+</head>
+<body>
+    <form method="post" action="./GradeReport.html" id="aspnetForm" class="mainForm">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4NzI3NDc4OTYPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCZg9kFgJmD2QWAgIDD2QWBAIBD2QWAmYPFgIeBXN0eWxlBQxoZWlnaHQ6NTVweDsWBmYPFgIfAQVNdGV4dC1pbmRlbnQ6LTk5OXB4O2JhY2tncm91bmQtaW1hZ2U6dXJsKC4uL0JyYW5kaW5nL0xDU0JfSGVhZGVyTG9nb19CbGsucG5nKTtkAgMPFgIeB1Zpc2libGVoZAIEDxYCHgRocmVmBWZodHRwOi8vZ2JoZWxwLndhenpsZXNvbHV0aW9ucy5jb20vP3ZlcnNpb249MTYuOC4xNzMzNC4xJmN1c3RvbWVySWQ9MTEyNzYyNCZyb2xlPVRlYWNoZXImdXNlcj0xNzEwNTMwMTVkAgIPDxYCHwJoZGRkZz13fxCJseENaj7P+UaMkcKMopY=" type="hidden">
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var PageIdPrefix='ctl00_ctl00_ContentPlaceHolder_';var PageContentIdPrefix='ctl00_ctl00_ContentPlaceHolder_ContentPane_';//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AE12C7A5" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAMDmkGK6LkLnTOEzlikia1WtebAYtBK+g9NUDmf8g8/ivHVLV9dlQchjB1VdJfRe4OJBYUuOtn/33KTdR1184rdL57wIA==" type="hidden">
+</div>
+	    <input name="ctl00$ctl00$uxStudentId" id="ctl00_ctl00_uxStudentId" value="53684" type="hidden">
+        
+
+<script type="text/javascript">
+	var teacherSearchId = '';
+	var teacherSearchBox = 'teacherSearchBox';
+	var headerBarId = 'ctl00_ctl00_PageHeader_headerBar';
+	var siteRoot = "/Pinnacle/Gradebook/";
+
+	ShowMessage = function (showLink) {
+		if (showLink === false)
+			$('doNotShowDialog').style["display"] = "none";
+
+		var uxMessageDialog = $('uxMessageDialog');
+		var messageDialog = new Dialog("uxMessageDialog");
+
+		messageDialog.open(uxMessageDialog);
+	};
+
+	SetDoNotShow = function () {
+		this._request = new Json.Request("InternetViewerService.ashx", "DoNotShowMsg");
+		this._request.invoke();
+
+		var messageDialog = new Dialog("uxMessageDialog");
+		messageDialog.close();
+	};
+</script>
+
+<style>
+	@media only screen and (max-width: 767px) {
+		
+		#header #logoRow img {
+			height: 55px;
+		}
+
+		#header {
+			height: 105px;
+		}
+
+		#header, .side-bar {
+			-webkit-transform: translateY( 0 );
+			-ms-transform: translateY( 0 );
+			transform: translateY( 0 );
+			-webkit-transition: all .25s ease-in-out;
+			-moz-transition: all .25s ease-in-out;
+			-ms-transition: all .25s ease-in-out;
+			-o-transition: all .25s ease-in-out;
+			transition: all .25s ease-in-out;
+		}
+
+		#header.logo-hidden,.side-bar.logo-hidden {
+			-webkit-transform: translateY( -55px );
+			-ms-transform: translateY( -55px );
+			transform: translateY( -55px );
+			transition: all .25s ease-in-out;
+		}
+
+		.side-bar {
+			top: 105px;
+		}
+
+
+		.side-bar.show:not(.logo-hidden) {
+			min-height: calc(100% - 106px);
+			transition: all .25s ease-in-out;
+		}
+
+		#Main {
+			padding-top: 105px;
+		}
+
+	}
+
+	#logoRow h1 {
+		line-height: 50px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#logoRow div img {
+		height: 100%;
+	}
+</style>
+
+<header id="header" data-mobile="false" class="logo-hidden">
+	<div id="logoRow" class="text-center visible-xs-block">
+		
+			<img class="center-block" src="Grades_files/LCSB_HeaderLogo_Blk.png">
+		
+	</div>
+
+	<div id="ctl00_ctl00_PageHeader_headerBar" class="TopBar" style="height:55px;">
+		
+			<a class="button-menu visible-xs-inline-block" href="#menu">
+				<span>Menu</span>
+			</a>
+		<h1 id="ctl00_ctl00_PageHeader_uxLogo" class="hidden-xs" style="text-indent:-999px;background-image:url(../Branding/LCSB_HeaderLogo_Blk.png);">Leon County School District</h1>
+
+		
+			<div class="TopLoginHeader">
+				<table id="headerTable">
+					<tbody><tr id="HeaderRow">
+						
+						<td>
+							<a href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/Logon.html?Action=Logout" id="ctl00_ctl00_PageHeader_LogoutLink">Sign out</a>
+						</td>
+
+						
+
+						
+						
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+</header>
+
+
+	<div class="modal" id="uxSearchDialog" tabindex="-1" role="dialog" aria-labelledby="uxSearchTitle">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+					<h4 class="modal-title" id="uxSearchTitle">Advanced Teacher Search</h4>
+				</div>
+				<div class="modal-body">
+					<div class="searchparams">
+						<div class="row">
+							<div class="form-group col-xs-12 col-sm-4">
+								<input class="form-control" id="uxSearchDialog_LastName" placeholder="Last name..." type="text">
+							</div>
+
+							<div class="form-group col-xs-12 col-sm-4">
+								<input class="form-control" id="uxSearchDialog_FirstName" placeholder="First name..." type="text">
+							</div>
+
+							<div class="form-group col-xs-12 col-sm-4">
+								<select id="uxSchoolList" class="form-control"></select>
+							</div>
+						</div>
+					</div>
+					<div class="searchResults list-group" id="uxSearchResult">
+						<div id="uxInstruction" style="line-height: 17em; height: 100%; text-align: center;">Start typing in the above text boxes to begin searching. </div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	    <section id="Main" class="">
+		    <div id="sideBar" class="side-bar logo-hidden" style="min-height: calc(100% - 56px);">
+			<div class="user-info">
+				<div class="media-left">
+					<a href="#">
+						<img class="media-object person-photo img-rounded" id="userPhoto" src="Grades_files/Picture.png" alt="User photo">
+					</a>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">
+						<span>Finger, Jeffery</span>
+					</h4>
+				</div>
+			</div>
+			<div class="list-group menu-list">
+					<section class="">
+							<a role="button" class="list-group-item list-group-item-heading" href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/Default.html">
+										<i class="fa fa-lg fa-fw fa-home"></i>
+
+								Home
+
+							</a>
+
+					</section>
+					<section class="">
+							<a role="button" class="list-group-item list-group-item-heading" href="#">
+										<i class="fa fa-lg fa-fw fa-search"></i>
+
+								Student Details
+
+							</a>
+
+							<div id="a33b1e149d5342cab4028d8ff6dc1bac">
+
+
+										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/MissingAndUpcomingAssignments.html?Student=53684">Missing &amp; Upcoming Assignments</a>
+										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/GradeReport.html?Student=53684">Grades</a>
+										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/AttendanceSummary.html?Student=53684">Attendance</a>
+										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentSchedule.html?Student=53684">Schedule</a>
+										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/Demographics.html?Student=53684">Demographics</a>
+										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/Subscriptions.html?Student=53684">Notifications</a>
+							</div>
+					</section>
+					<section class="">
+							<a role="button" class="list-group-item list-group-item-heading" href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/Gradebook/ProfileGeneral.html">
+										<i class="fa fa-lg fa-fw fa-cog"></i>
+
+								Options
+
+							</a>
+
+							<div id="7d30c41e8e6b40b19393eb9779564c19">
+
+
+										<a class="list-group-item " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/Gradebook/ProfileGeneral.html">Edit Profile</a>
+							</div>
+					</section>
+									<div class="list-group-item footer text-muted">
+						<div>Last login: 12/14/2017 6:47:34 PM</div>
+						<div>Wazzle Gradebook</div>
+						<div>Copyright 2016 Wazzle Solutions, LLC. </div>
+						<div>All rights reserved.</div>
+						<div>
+							<img style="transform:scale(0.75)" src="Grades_files/CompanyLogo.png">
+						</div>
+					</div>
+			</div>
+</div>
+	        
+    
+    <script type="text/javascript" src="Grades_files/jQuery.js"></script>
+
+    <script type="text/javascript" src="Grades_files/SessionReminder.js"></script>
+
+    <script type="text/javascript">
+        var BasePath = '/Pinnacle/Gradebook/';
+        var PromptDelay = '0';
+		var reminder;
+
+        (function($)
+        {
+            $(document).ready(function()
+			{
+				reminder = new SessionReminder('sessionReminder', BasePath, PromptDelay, '14278598|97461');
+                reminder.start(50);
+            });
+        })(jQuery);
+    </script>
+    <link rel="stylesheet" type="text/css" href="Grades_files/Dialog.css">
+
+
+	        
+	<div>
+		<input name="ctl00$ctl00$ContentPlaceHolder$uxStudentId" id="ctl00_ctl00_ContentPlaceHolder_uxStudentId" value="53684" type="hidden">
+		<div id="ClassDetails" style="box-shadow: 0px 0px 10px #444444; display: none; overflow: auto">
+			<div class="detailMargin">
+				<img onclick="javascript:ClassDetails.close();" src="Grades_files/close_btn.gif">
+				<div class="detailContent">
+					<div>
+						<div class="heading">
+							<label id="courseName" style="display: inline"></label>
+						</div>
+					</div>
+
+					<div class="vertFormRow">
+						<table class="classInfo">
+							<tbody>
+								<tr>
+									<th>Teacher:</th>
+									<td>
+										<label id="teacherName" style="display: inline"></label>
+									</td>
+								</tr>
+								<tr>
+									<th>Period:</th>
+									<td>
+										<label id="period" style="display: inline">
+									</label></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="description">
+						<span>Course Description: </span>
+					</div>
+					<div class="descriptionContent">
+						<div class="textstyle" id="description"></div>
+					</div>
+
+					<div class="narrative">
+						<span>Narrative: </span>
+					</div>
+					<div class="narrativeContent">
+						<div class="textstyle" id="narrative"></div>
+					</div>
+					<div class="closeRow">
+						<input class="button" onclick="javascript:ClassDetails.close();" value="Close" type="button">
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div id="Content">
+			
+	<div id="ContentHeader">
+	<div>
+		<h1>
+			Grades
+			<small class="text-muted"></small>
+		</h1>
+
+
+		<h2 class="text-muted">Finger, Jeffery</h2>
+	</div>
+</div>
+	<div id="ContentMain">
+		
+			<div>
+				<div class="heading clickable" data-toggle="collapse" data-target="#year2017" aria-expanded="false" aria-controls="Collapse calendar year">
+					<i class="fa fa-fw pull-left fa-chevron-up" data-collapse="#year2017"></i>
+					<span class="year">2017 - 2018</span>
+				</div>
+				<div id="year2017" class="grid collapse in">
+					
+						<div class="row">
+							<div class="period">1</div>
+							<div style="float: left">
+								<span class="course">M/J CHORUS 2</span>
+								<div class="teacher">Pettit, Elizabeth</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="#">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															100%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 3</div>
+									</a>
+									
+										</div>
+								<div style="float: right">
+									
+									<a class="letter-container " href="#">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															97%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 2</div>
+									</a>
+									
+									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments01.html?Enrollment=3642269&amp;Term=532639">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															97%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 1</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="period">2</div>
+							<div style="float: left">
+								<span class="course">M/J LANG ARTS 2, ADV</span>
+								<div class="teacher">Watkins, Barbara</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments02.html?Enrollment=3640576&amp;Term=532012">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															97%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 3</div>
+									</a>
+									
+										</div>
+								<div style="float: right">
+									
+									<a class="letter-container " href="?Enrollment=3640576&amp;Term=532010">
+										<div class="letter" style="color:#7F7F00;background-color:#F2F2DA" title="">
+											<div>
+												<div>
+													C
+														<span class="percent">
+															78%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 2</div>
+									</a>
+									
+									<a class="letter-container " href="?Enrollment=3640576&amp;Term=532009">
+										<div class="letter" style="color:#3F7F00;background-color:#E6F2DA" title="">
+											<div>
+												<div>
+													B
+														<span class="percent">
+															86%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 1</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="period">3</div>
+							<div style="float: left">
+								<span class="course">M/J COMPRE SCI 2 ADV</span>
+								<div class="teacher">Gamble, Brittanian</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments03.html?Enrollment=3896969&amp;Term=533125">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															97%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 3</div>
+									</a>
+									
+										</div>
+								<div style="float: right">
+									
+									<a class="letter-container " href="?Enrollment=3896969&amp;Term=533123">
+										<div class="letter" style="color:#3F7F00;background-color:#E6F2DA" title="">
+											<div>
+												<div>
+													B
+														<span class="percent">
+															88%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 2</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="period">4</div>
+							<div style="float: left">
+								<span class="course">M/J CIVICS ADV</span>
+								<div class="teacher">Schroepfer, Cathryn</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments04.html?Enrollment=3645199&amp;Term=532180">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															98%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 3</div>
+									</a>
+									
+										</div>
+								<div style="float: right">
+									
+									<a class="letter-container " href="?Enrollment=3645199&amp;Term=532178">
+										<div class="letter" style="color:#3F7F00;background-color:#E6F2DA" title="">
+											<div>
+												<div>
+													B
+														<span class="percent">
+															88%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 2</div>
+									</a>
+									
+									<a class="letter-container " href="?Enrollment=3645199&amp;Term=532177">
+										<div class="letter" style="color:#3F7F00;background-color:#E6F2DA" title="">
+											<div>
+												<div>
+													B
+														<span class="percent">
+															85%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 1</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="period">5</div>
+							<div style="float: left">
+								<span class="course">M/J ADV STEM</span>
+								<div class="teacher">Cramer, Pat</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="?Enrollment=3897693&amp;Term=531984">
+										<div class="letter" style="" title="">
+											<div>
+												<div>
+													
+														<span class="percent">
+															
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 3</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="period">6</div>
+							<div style="float: left">
+								<span class="course">M/J MATH 2, ADV</span>
+								<div class="teacher">McCrimmon, Sandra</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="http://gradesleonschools.co.nf/Pinnacle/Gradebook/InternetViewer/StudentAssignments06.html?Enrollment=3896957&amp;Term=532530">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															100%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 3</div>
+									</a>
+									
+										</div>
+								<div style="float: right">
+									
+									<a class="letter-container " href="?Enrollment=3896957&amp;Term=532528">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															99%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 2</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+					<div class="heading">Prior Classes for 2017 - 2018</div>
+					
+						<div class="row">
+							<div class="period">3</div>
+							<div style="float: left">
+								<span class="course">ALG 1 HON</span>
+								<div class="teacher">Kelley, Rima</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="?Enrollment=3641296&amp;Term=532352">
+										<div class="letter" style="color:#3F7F00;background-color:#E6F2DA" title="">
+											<div>
+												<div>
+													B
+														<span class="percent">
+															85%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 1</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="period">5</div>
+							<div style="float: left">
+								<span class="course">ORIEN CAR&amp; TECH OCCS</span>
+								<div class="teacher">Lightfoot, Jeffrey</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="?Enrollment=3873021&amp;Term=630584">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															100%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 2</div>
+									</a>
+									
+									<a class="letter-container " href="?Enrollment=3873021&amp;Term=630583">
+										<div class="letter" style="color:#007F00;background-color:#DAF2DA" title="">
+											<div>
+												<div>
+													A
+														<span class="percent">
+															100%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 1</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="period">6</div>
+							<div style="float: left">
+								<span class="course">ERTH/SPA SCI HON</span>
+								<div class="teacher">Blair, Marla</div>
+							</div>
+							<div style="float: right">
+								
+								<div style="float: right">
+									
+									<a class="letter-container " href="?Enrollment=3643785&amp;Term=531463">
+										<div class="letter" style="color:#3F7F00;background-color:#E6F2DA" title="">
+											<div>
+												<div>
+													B
+														<span class="percent">
+															88%
+														</span>
+													
+												</div>
+											</div>
+										</div>
+										<div class="letter-label">Grading Period 1</div>
+									</a>
+									
+							</div>
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		
+	</div>
+
+			
+			<p class="report-time">
+				This report was generated on 1/14/2018 at 8:22 AM
+			</p>
+		</div>
+	</div>
+	<div aria-labelledby="uxMessageDialogLabel" class="modal" id="uxMessageDialog" role="dialog" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title" id="uxMessageDialogLabel">Message Board</h4>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+					<button id="doNotShowDialog" class="btn btn-link" onclick="SetDoNotShow();return false;" type="button">Have read the message, please don't show it next time.</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+            
+	<div id="Lightbox"></div>
+	
+
+        </section>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+initialize();//]]>
+</script>
+</form>
+
+	<script>
+		(function ($) {
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+				$('[data-toggle="popover"]').popover();
+
+				var height = $("#header").outerHeight();
+				if ($("#logoRow").is(":visible"))
+					height += $("#logoRow div").outerHeight();
+
+				var sideBar = $("#sideBar");
+				if (sideBar.hasClass("always-float")) {
+					sideBar.css("height", "calc(100% - " + height + "px");
+					sideBar.css("overflow-x", "hidden");
+					sideBar.css("overflow-y", "auto");
+				}
+				else {
+					sideBar.css("min-height", "calc(100% - " + height + "px");
+				}
+
+				$("[data-toggle=clear]")
+					.on("click", function (event) {
+						var targetSelector = $(event.target).data("target");
+						var $target = $(targetSelector);
+						$target.val("");
+						$.post(rootPath + "common/Impersonation.ashx/ClearImpersonation")
+							.done(function () {
+								document.location.href = "Default.html";
+							});
+					});
+
+				$("[data-toggle=advanced]").on("click", function (event) { onAdvancedSearch(event); });
+
+				$("[data-collapse]").iconSwitcher();
+			});
+		})(jQuery);
+	</script>
+
+
+<div id="sCLExtInstalled" data-version="4.20" style="display: none;">1</div></body></html>
