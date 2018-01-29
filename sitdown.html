@@ -50,7 +50,7 @@
 			}
 			
 			var name = getParameterByName("name");
-			if (name == undefined || name == "undefined" || name == null || name == "null"") {
+			if (name != undefined || name != "undefined" || name != null || name != "null") {
 				document.getElementById("sitdown").innerHTML = "Hey, " + name + "...";
 			}
 		</script>
