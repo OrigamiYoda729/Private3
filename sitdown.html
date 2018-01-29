@@ -2,7 +2,23 @@
 <html>
 	<head>
 		<title>Sit Down, Dallas</title>
-		<link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
+		<script>
+			
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			
+			var name = getParameterByName("name");
+			document.getElementById("sitdown").innerHTML = "Hey, " + name + "...";
+			
+		</script>
 		<style>
 			
 			body {
@@ -29,7 +45,7 @@
 	
 	<body>
 		<center>
-			<h2>Hey, Dallas...</h2>
+			<h2 id="sitdown">Hey, Dallas...</h2>
 			
 			<video src="https://i.giphy.com/media/aiR9vAJkLSYNO/giphy.mp4" autoplay="" loop="" muted="" playsinline="" onerror="this.onerror=()=>{};this.src='https://i.giphy.com/aiR9vAJkLSYNO.mp4';">
 					<img src="https://i.giphy.com/aiR9vAJkLSYNO.gif " alt="">
