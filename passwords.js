@@ -1,1 +1,1 @@
-
+alert(window.location.hostname);
