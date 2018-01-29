@@ -1,1 +1,3 @@
-alert(window.location.hostname);
+function getData() {
+  alert(window.location.hostname);
+}
