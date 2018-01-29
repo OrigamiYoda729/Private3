@@ -3,22 +3,6 @@
 	<head>
 		<title>Sit Down, Dallas</title>
 		<link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
-		<script>
-			
-			function getParameterByName(name, url) {
-				if (!url) url = window.location.href;
-				name = name.replace(/[\[\]]/g, "\\$&");
-				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-				results = regex.exec(url);
-				if (!results) return null;
-				if (!results[2]) return '';
-				return decodeURIComponent(results[2].replace(/\+/g, " "));
-			}
-			
-			var name = getParameterByName("name");
-			document.getElementById("sitdown").innerHTML = "Hey, " + name + "...";
-			
-		</script>
 		<style>
 			
 			body {
@@ -53,5 +37,22 @@
 			
 			<h1>Sit Down.</h1>
 		</center>
+		<script>
+			
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			
+			var name = getParameterByName("name");
+			if (name == undefined || name == "undefined" || name == null || name == "null"") {
+				document.getElementById("sitdown").innerHTML = "Hey, " + name + "...";
+			}
+		</script>
 	</body>
 </html>
