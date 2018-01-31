@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sit Down, Dallas</title>
+		<link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
+		<style>
+			
+			body {
+				padding: 0;
+			}
+			
+			h1, h2 {
+				font-family: "Rubik", sans-serif;
+				color: #2d2d2d;
+			}
+			
+			h1 {
+				margin-top: 1.5em;
+				font-size: 3.25em;
+			}
+			
+			h2 {
+				margin-top: 1.5em;
+				margin-bottom: 1em;
+				font-size: 2em;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<center>
+			<h2 id="sitdown">Hey, Dallas...</h2>
+			
+			<video src="https://i.giphy.com/media/aiR9vAJkLSYNO/giphy.mp4" autoplay="" loop="" muted="" playsinline="" onerror="this.onerror=()=>{};this.src='https://i.giphy.com/aiR9vAJkLSYNO.mp4';">
+					<img src="https://i.giphy.com/aiR9vAJkLSYNO.gif" alt="">
+			</video>
+			
+			<h1>Sit Down.</h1>
+		</center>
+		<script>
+			
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			
+			var name = getParameterByName("name");
+			if (name != undefined || name != "undefined" || name != null || name != "null") {
+				document.getElementById("sitdown").innerHTML = "Hey, " + name + "...";
+				document.title = "Sit down, " + name + ".";
+			}
+		</script>
+	</body>
+</html>
