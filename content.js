@@ -33,6 +33,10 @@
 		document.getElementById("Page_Header").innerHTML = "Grades";
 		document.title = "Grades";
 	} else
+	if (load == "Logon") {
+		error = "False";
+		location.href = "logout.html"
+	} else
 	if (load == "MissingAndUpcomingAssignments") {
 		error = "False";
 		document.getElementById("Page_mainContent").innerHTML = Missing;

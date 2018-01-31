@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://grades.leonschools.net/Pinnacle/Gradebook/Logon.aspx?Action=Logout -->
+<html style="visibility: visible;"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Logon
+</title>
+    <link rel="shortcut icon" href="https://grades.leonschools.net/Pinnacle/Gradebook/Images/favicon.png">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./logout_files/jquery"></script>
+<script src="./logout_files/bootstrap"></script>
+
+    <script>jQuery.noConflict();</script>
+	<script type="text/javascript" src="./logout_files/Common.js.download"></script>
+<script type="text/javascript" src="./logout_files/Event.js.download"></script>
+<script type="text/javascript" src="./logout_files/Json.js.download"></script>
+<script type="text/javascript" src="./logout_files/Effect.js.download"></script>
+<script type="text/javascript" src="./logout_files/TabBar.js.download"></script>
+<script type="text/javascript" src="./logout_files/Dialog.js.download"></script>
+<script type="text/javascript" src="./logout_files/Timer.js.download"></script>
+<script type="text/javascript" src="./logout_files/Search.js.download"></script>
+<script type="text/javascript" src="./logout_files/Watermark.js.download"></script>
+<script type="text/javascript" src="./logout_files/AdvancedSearch.js.download"></script>
+<script type="text/javascript" src="./logout_files/IconSwitcher.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./logout_files/Search.css">
+<script type="text/javascript" src="./logout_files/Search.js(1).download"></script>
+<script type="text/javascript" src="./logout_files/Header.js.download"></script>
+
+    <script type="text/javascript">
+	    var masterPrefix = "ctl00_";
+	    var prefix = masterPrefix + "ContentPlaceHolder_";
+	    var rootPath = "/Pinnacle/Gradebook/";
+    </script>
+    <link href="./logout_files/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./logout_files/Base.css">
+<link rel="stylesheet" type="text/css" href="./logout_files/TabBar.css">
+<link rel="stylesheet" type="text/css" href="./logout_files/Main.css">
+<link rel="stylesheet" type="text/css" href="./logout_files/Form.css">
+<link rel="stylesheet" type="text/css" href="./logout_files/Header.css">
+<link rel="stylesheet" type="text/css" href="./logout_files/Nav.css">
+<link rel="stylesheet" type="text/css" href="./logout_files/Dialog.css">
+
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+	<style type="text/css">
+		html {
+			background-color: #E8E8E8;
+			visibility: hidden;
+		}
+
+		body {
+			background-color: #F7F8F9;
+		}
+
+		.LogonPanel {
+			background-color: #FFF;
+			border: 3px solid #AAC0D5;
+			margin: 5em auto;
+			max-width: 374px;
+			min-width: 220px;
+			overflow: hidden;
+			padding: 1em 2em;
+			position: relative;
+		}
+
+		@media only screen and (max-width: 435px) {
+			.LogonPanel {
+				background-color: inherit;
+				border: 0;
+				margin-bottom: 1em;
+				margin-top: 0;
+			}
+		}
+
+		.LogonForm label {
+			display: block;
+			margin-bottom: 0.25em;
+			margin-top: 1em;
+		}
+
+		.LogonForm input[type="text"],
+		.LogonForm input[type="password"] {
+			box-sizing: border-box;
+			width: 100%;
+		}
+
+		.BrowserPanel {
+			background-color: #FFF;
+			border: 3px solid #AAC0D5;
+			display: inline-block;
+			font-size: 13px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+			padding: 20px;
+			width: 500px;
+		}
+
+		.noScriptDiv {
+			background-color: #FFF;
+			border: 3px solid #AAC0D5;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+			padding: 20px;
+			visibility: visible;
+			width: 350px;
+		}
+
+		.singleSchoolList {
+			display: none;
+		}
+
+		.customerContact {
+			color: #800000;
+			font-size: 13px;
+		}
+
+		.circledList {
+			color: Black;
+			list-style-type: circle;
+			margin-left: 30px;
+		}
+
+		ul li img {
+			padding-bottom: 3px;
+			vertical-align: middle;
+		}
+
+		p {
+			margin: 1em 0;
+		}
+
+		.external-login-button-container {
+			margin-bottom: 10px;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		span.social-button-container {
+			position: relative;
+		}
+
+		span.social-button-container::before {
+			color: white;
+			font-family: FontAwesome;
+			left: 20px;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+		}
+
+		input[type="submit"] {
+			-moz-appearance: none;
+			-webkit-appearance: none;
+		}
+
+		input[type="submit"].social-button,
+			a.social-button {
+			color: white;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		input[type="submit"].Google,
+			a.Google {
+			background-color: #dd4b39;
+		}
+
+		input[type="submit"].Facebook,
+			a.Facebook {
+			background-color: #3b5998;
+		}
+
+		span.Facebook::before {
+			content: "\f09a";
+		}
+
+		span.Google::before {
+			content: "\f1a0";
+		}
+
+		@media (max-width: 435px) {
+			input[type="submit"].social-button {
+				width: 100%;
+			}
+		}
+
+	</style>
+	<script type="text/javascript">
+		if (self === top)
+			document.documentElement.style.visibility = "visible";
+		else
+			top.location = self.location;
+	</script>
+
+	<script type="text/javascript" src="./logout_files/InputFeedback.js.download"></script>
+
+<link rel="stylesheet" type="text/css" href="./logout_files/font-awesome.min.css">
+</head>
+<body>
+    <form method="post" action="https://grades.leonschools.net/Pinnacle/Gradebook/Logon.aspx?Action=Logout" id="form1" class="mainForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzcwOTgyMjM2DxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWAmYPZBYCAgMPZBYGAgEPZBYCZg8WAh4Fc3R5bGUFDGhlaWdodDo1NXB4OxYCZg8WAh8BBUp0ZXh0LWluZGVudDotOTk5cHg7YmFja2dyb3VuZC1pbWFnZTp1cmwoQnJhbmRpbmcvTENTQl9IZWFkZXJMb2dvX0Jsay5wbmcpO2QCAg8PFgIeB1Zpc2libGVoZGQCBA9kFgRmD2QWBAIDDxYCHgVjbGFzcwUQc2luZ2xlU2Nob29sTGlzdBYCAgMPEGQPFgFmFgEQBQEqBSRiZjRjNTJmNC1lYjE3LTRhM2ItYjM5Ni0yMmE4NDE3NGQwMjZnZGQCEQ8WAh4LXyFJdGVtQ291bnRmZAIDD2QWAgIRD2QWAgIDDxBkZBYAZGRQH2G5f8om3cfAH0V3f0bIIgsmLg==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./logout_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./logout_files/WebResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3853A6CF">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAe+RIFxy2zNGNk/PJOKJ7xCaI2BIfpZAl0sn8cLmKnfVXpiAyxht7ekG3bMq1a+8LbmQEzzM1qp8sbPnv5LxsGNs2oobjN7vnB8MXeMafPZZjmvJzX9Oh+iBZ+EzcXDTVBxi2zIi6/6DDmf+Oo4S5+hjH3IosLgq6aYCoS2MQai4NItXvQ=">
+</div>
+	    <input name="ctl00$uxStudentId" type="hidden" id="uxStudentId">
+        
+
+<script type="text/javascript">
+	var teacherSearchId = '';
+	var teacherSearchBox = 'teacherSearchBox';
+	var headerBarId = 'PageHeader_headerBar';
+	var siteRoot = "/Pinnacle/Gradebook/";
+
+	ShowMessage = function (showLink) {
+		if (showLink === false)
+			$('doNotShowDialog').style["display"] = "none";
+
+		var uxMessageDialog = $('uxMessageDialog');
+		var messageDialog = new Dialog("uxMessageDialog");
+
+		messageDialog.open(uxMessageDialog);
+	};
+
+	SetDoNotShow = function () {
+		this._request = new Json.Request("InternetViewerService.ashx", "DoNotShowMsg");
+		this._request.invoke();
+
+		var messageDialog = new Dialog("uxMessageDialog");
+		messageDialog.close();
+	};
+</script>
+
+<style>
+	@media only screen and (max-width: 767px) {
+		
+			.TopBar {
+				display: none;
+			}
+		
+		#header #logoRow img {
+			height: 55px;
+		}
+
+		#header {
+			height: 55px;
+		}
+
+		#header, .side-bar {
+			-webkit-transform: translateY( 0 );
+			-ms-transform: translateY( 0 );
+			transform: translateY( 0 );
+			-webkit-transition: all .25s ease-in-out;
+			-moz-transition: all .25s ease-in-out;
+			-ms-transition: all .25s ease-in-out;
+			-o-transition: all .25s ease-in-out;
+			transition: all .25s ease-in-out;
+		}
+
+		#header.logo-hidden,.side-bar.logo-hidden {
+			-webkit-transform: translateY( -55px );
+			-ms-transform: translateY( -55px );
+			transform: translateY( -55px );
+			transition: all .25s ease-in-out;
+		}
+
+		.side-bar {
+			top: 55px;
+		}
+
+
+		.side-bar.show:not(.logo-hidden) {
+			min-height: calc(100% - 106px);
+			transition: all .25s ease-in-out;
+		}
+
+		#Main {
+			padding-top: 55px;
+		}
+
+	}
+
+	#logoRow h1 {
+		line-height: 50px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#logoRow div img {
+		height: 100%;
+	}
+</style>
+
+<header id="header" data-mobile="false">
+	<div id="logoRow" class="text-center visible-xs-block">
+		
+			<img class="center-block" src="./logout_files/LCSB_HeaderLogo_Blk.png">
+		
+	</div>
+
+	<div id="PageHeader_headerBar" class="TopBar" style="height:55px;">
+		<h1 id="PageHeader_uxLogo" class="hidden-xs" style="text-indent:-999px;background-image:url(Branding/LCSB_HeaderLogo_Blk.png);">Leon County School District</h1>
+
+		</div>
+</header>
+
+
+	    <section id="Main" class="no-side-bar">
+		    
+	        
+	        
+<noscript style="bottom: 47px; margin: 0; overflow: auto; padding: 0; position: fixed; text-align: center; top: 46px; width: 100%;">
+	&lt;div class="noScriptDiv"&gt;
+		&lt;p&gt;This website requires your browser to have JavaScript enabled. Please enable JavaScript to continue.&lt;/p&gt;
+	&lt;/div&gt;
+</noscript>
+
+<div id="ContentPlaceHolder_LogonForm" class="LogonPanel">
+	<p id="ContentPlaceHolder_uxMessage" class="alert alert-success">You have been logged out successfully.</p>
+	<div class="LogonForm">
+		<div class="form-group">
+			<div id="ContentPlaceHolder_uxDomainDialog" class="singleSchoolList">
+				<label for="ContentPlaceHolder_lstDomains" id="ContentPlaceHolder_lblDomain">Domain</label>
+				<select name="ctl00$ContentPlaceHolder$lstDomains" id="ContentPlaceHolder_lstDomains" class="form-control">
+	<option selected="selected" value="bf4c52f4-eb17-4a3b-b396-22a84174d026">*</option>
+
+</select>
+			</div>
+		</div>
+
+		<div id="credentials">
+			<div class="form-group">
+				<label for="ContentPlaceHolder_Username" id="ContentPlaceHolder_lblUsername">Username</label>
+				<input id="user_username" class="form-control" autocapitalize="off" autocorrect="off" spellcheck="false" data-validate="required" onchange="return ValidateLogonForm();" type="text">
+			</div>
+
+			<div class="form-group">
+				<label for="ContentPlaceHolder_Password" id="ContentPlaceHolder_lblPassword">Password</label>
+				<input id="user_password" class="form-control" autocomplete="off" type="password">
+				<a id="ContentPlaceHolder_ForgotPassword" tabindex="-1" class="btn btn-link btn-sm btn-block" href='javascript:WebForm_DoPostBackWithOptions(new%20WebForm_PostBackOptions("ctl00$ContentPlaceHolder$ForgotPassword",%20"",%20true,%20"",%20"",%20false,%20true))'>Forgot Password?</a>
+			</div>
+		</div>
+
+		<div>
+			<input value="Sign in" onclick='login()' class="btn btn-default btn-block" type="button">
+		</div>
+
+		<script>
+			function login() {
+				var username = document.getElementById("user_username").value;
+				var password = document.getElementById("user_password").value;
+				var error
+				
+				if (username == "fingerj3015" && password == "cwpnxx") {
+					error = "false";
+					location.href = "Default.html";
+				}
+			}
+		</script>
+
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="Footer">
+	<p>
+		Wazzle Gradebook<br>
+		Copyright 2016 Wazzle Solutions, LLC.  All rights reserved.
+	</p>
+</div>
+
+<script>
+	var ValidateLogonForm;
+	(function ($) {
+		ValidateLogonForm = function () {
+			var field = $("[data-validate=required]:visible");
+			var isValid = true;
+			field.each(function () {
+				var $this = $(this);
+				if ($this.val().length === 0) {
+					$this.giveFeedback("error");
+					isValid = false;
+				}
+				else
+					$this.clearFeedback("");
+			});
+
+			return isValid;
+		}
+
+		function ToggleCredentialsPanel() {
+			if ($("#ContentPlaceHolder_lstDomains option:selected").data("external")) {
+				$("#credentials").hide();
+			}
+			else {
+				$("#credentials").show();
+			}
+		}
+
+		$("#ContentPlaceHolder_lstDomains").change(ToggleCredentialsPanel);
+
+		ToggleCredentialsPanel();
+
+		$(function () {
+			var lockedPassword = $("[id$=lockedPassword]");
+			if (lockedPassword.length !== 0) {
+				lockedPassword.parent().show();
+				$("#lockedPasswordHelp").show();
+			}
+		});
+	})(jQuery);
+</script>
+
+            
+        </section>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+initialize();WebForm_AutoFocus('ContentPlaceHolder_Username');//]]>
+</script>
+</form>
+
+	<script>
+		(function ($) {
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+				$('[data-toggle="popover"]').popover();
+
+				var height = $("#header").outerHeight();
+				if ($("#logoRow").is(":visible"))
+					height += $("#logoRow div").outerHeight();
+
+				var sideBar = $("#sideBar");
+				if (sideBar.hasClass("always-float")) {
+					sideBar.css("height", "calc(100% - " + height + "px");
+					sideBar.css("overflow-x", "hidden");
+					sideBar.css("overflow-y", "auto");
+				}
+				else {
+					sideBar.css("min-height", "calc(100% - " + height + "px");
+				}
+
+				$("[data-toggle=clear]")
+					.on("click", function (event) {
+						var targetSelector = $(event.target).data("target");
+						var $target = $(targetSelector);
+						$target.val("");
+						$.post(rootPath + "common/Impersonation.ashx/ClearImpersonation")
+							.done(function () {
+								document.location.href = "Default.aspx";
+							});
+					});
+
+				$("[data-toggle=advanced]").on("click", function (event) { onAdvancedSearch(event); });
+
+				$("[data-collapse]").iconSwitcher();
+			});
+		})(jQuery);
+	</script>
+
+
+<div id="sCLExtInstalled" data-version="3.9" style="display: none;">1</div></body></html>
