@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Redirecting...</title>
+		<script src="assets/codes.js"></script>
+		<script>
+		
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			
+			var game = getParameterByName("game");
+			var code = getCode(game);
+			
+			if (code != "invalid" && code != undefined && code != "undefined" && code != null && code != "undefined") {
+				parent.location.href = "default.html?gc=" + code;
+			} else {
+				alert("An error has occured.");
+				parent.location.href = "https://www.edmodo.com/home";
+			}
+			
+		</script>
+	</head>
+	
+</html>
