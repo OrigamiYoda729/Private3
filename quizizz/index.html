@@ -4857,6 +4857,14 @@
         display: block;
       }
     </style>
+    <style>
+      .check-class-input {
+	cursor: pointer;
+      }
+      .check-class-input:hover {
+	color: #d5d5d5;
+      }
+    </style>
   </head>
   <body>
     <div id="app" class="theme-classic">
@@ -4886,9 +4894,9 @@
                 <div class="join-widget widget-gamecode">
                   <div class="widget-title">Select a Lesson
                   </div> 
-                  <input value="6-digit code" class="check-room-input" type="button"> 
+                  <input value="6-digit code" class="check-class-input check-room-input" type="button"> 
                   <button class="check-room-btn btn-with-highlighter">
-                    <div class="extra-big-text">Proceed
+                    <div class="extra-big-text" onclick="parent.location.href = 'default.html'">Cancel
                     </div>
                   </button>
                   <!---->
