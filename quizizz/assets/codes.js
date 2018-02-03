@@ -33,6 +33,18 @@
 				error = "false";
 				return "000000";
 			} else
+			if (game == "programming-4") { // lesson 4
+				error = "false";
+				return "000000";
+			} else
+			if (game == "programming-5") { // lesson 5
+				error = "false";
+				return "000000";
+			} else
+			if (game == "programming-6") { // lesson 6
+				error = "false";
+				return "000000";
+			} else
 			if (game == "programming-r1") { // lesson v1
 				error = "false";
 				return "000000";
@@ -52,6 +64,10 @@
 				return "000000";
 			} else
 			if (game == "webdesign-3") { // lesson 3
+				error = "false";
+				return "000000";
+			} else
+			if (game == "webdesign-4") { // lesson 4
 				error = "false";
 				return "000000";
 			} else
@@ -77,7 +93,11 @@
 				error = "false";
 				return "000000";
 			} else
-			if (game == "gaming-r1") { // lesson v1
+			if (game == "gaming-4") { // lesson 4
+				error = "false";
+				return "000000";
+			} else
+			if (game == "gaming-r1") { // review v1
 				error = "false";
 				return "000000";
 			} else
@@ -99,11 +119,43 @@
 				error = "false";
 				return "000000";
 			} else
-			if (game == "iba-r1") { // lesson v1
+			if (game == "iba-4") { // lesson 4
+				error = "false";
+				return "000000";
+			} else
+			if (game == "iba-5") { // lesson 5
+				error = "false";
+				return "000000";
+			} else
+			if (game == "iba-6") { // lesson 6
+				error = "false";
+				return "000000";
+			} else
+			if (game == "iba-7") { // lesson 7
+				error = "false";
+				return "000000";
+			} else
+			if (game == "iba-8") { // lesson 8
+				error = "false";
+				return "000000";
+			} else
+			if (game == "iba-9") { // lesson 9
+				error = "false";
+				return "000000";
+			} else
+			if (game == "iba-10") { // lesson 10
+				error = "false";
+				return "000000";
+			} else
+			if (game == "iba-r1") { // review v1
 				error = "false";
 				return "000000";
 			} else
 			if (game == "iba-r2") { // review v2
+				error = "false";
+				return "000000";
+			} else
+			if (game == "iba-r3") { // review v2
 				error = "false";
 				return "000000";
 			}

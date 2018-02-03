@@ -5620,10 +5620,21 @@
 
 		.dropdown-content {display: none;}
 		
+		.dropdown-content input[type=button] {margin: 5px 0 auto 0; height: 60px; font-weight: 500 !important;}
+		
 		.dropdown a:hover {background-color: #ddd}
 
 		.show {display:block;}
+		
+		input[disabled=true] {
+			cursor: not-allowed;
+		}
+		
+		input[disabled=true]:hover {
+			background-color: #e5e5e5 !important;
+		}
 	</style>
+	<script src="https://use.fontawesome.com/4db924c22d.js"></script>
   </head>
 
   <body>
@@ -5646,47 +5657,100 @@
             <div class="main-content">
               <!---->
               <!---->
-              <div class="join-view-wrapper">
+              <div class="join-view-wrapper" style="margin-bottom: 25px;">
                 <div class="top-content">
                   <!---->
                   <!---->
                 </div>
-                <div class="join-widget widget-gamecode">
-                  <div class="widget-title">Select a Game
+                <div class="join-widget widget-gamecode" style="margin: 25px auto 0 auto;">
+                  <div class="widget-title"><h2>Select a Game</h2>
                   </div>
 				  
-				  <div class="dropdown">
-                  <button class="check-room-btn btn-with-highlighter" style="height: 60px;" onclick="myFunction1()">
-                    <div class="extra-big-text" style="margin-top: -2px;">Multimedia
+				  <div class="dropdown" style="margin: -25px 0;">
+                  <button class="check-room-btn btn-with-highlighter" style="height: 60px;" onclick="myFunction()">
+                    <div class="extra-big-text" style="margin-top: -2px;">Multimedia &nbsp;<i class="fa fa-angle-down"></i>
                     </div>
-					  <div id="myDropdown1" class="dropdown-content">
+                  </button>
+					  <div id="myDropdown" class="dropdown-content">
 						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('multimedia-1')">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('multimedia-2')">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('multimedia-r1')">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('multimedia-r2')">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('multimedia-2')" disabled="true">
+						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" type="button" onclick="play('multimedia-r1')">
+						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" type="button" onclick="play('multimedia-r2')" disabled="true">
 					  </div>
-                  </button>
-					</div>
-				  
-				  <div class="dropdown">
-                  <button class="check-room-btn btn-with-highlighter" style="height: 60px;" onclick="myFunction1()">
-                    <div class="extra-big-text" style="margin-top: -2px;">Programming
-                    </div>
-					  <div id="myDropdown1" class="dropdown-content">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('programming-1')">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('programming-2')">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('programming-r1')">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('programming-r2')">
-					  </div>
-                  </button>
 					</div>
 					
+				  <div class="dropdown">
+                  <button class="check-room-btn btn-with-highlighter" style="height: 60px;" onclick="myFunction1()">
+                    <div class="extra-big-text" style="margin-top: -2px;">Programming &nbsp;<i class="fa fa-angle-down"></i>
+                    </div>
+                  </button>
+					  <div id="myDropdown1" class="dropdown-content">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('programming-1')" disabled="true">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('programming-2')" disabled="true">
+						<input value="Lesson 3" class="check-room-input check-class-input" type="button" onclick="play('programming-3')" disabled="true">
+						<input value="Lesson 4" class="check-room-input check-class-input" type="button" onclick="play('programming-4')" disabled="true">
+						<input value="Lesson 5" class="check-room-input check-class-input" type="button" onclick="play('programming-5')" disabled="true">
+						<input value="Lesson 6" class="check-room-input check-class-input" type="button" onclick="play('programming-6')" disabled="true">
+						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" type="button" onclick="play('programming-r1')">
+						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" type="button" onclick="play('programming-r2')" disabled="true">
+					  </div>
+					</div>		
+					
+				  <div class="dropdown">
+                  <button class="check-room-btn btn-with-highlighter" style="height: 60px; margin-top: 20px;" onclick="myFunction2()">
+                    <div class="extra-big-text" style="margin-top: -2px;">Web Design &nbsp;<i class="fa fa-angle-down"></i>
+                    </div>
+                  </button>
+					  <div id="myDropdown2" class="dropdown-content">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('webdesign-1')" disabled="true">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('webdesign-2')" disabled="true">
+						<input value="Lesson 3" class="check-room-input check-class-input" type="button" onclick="play('webdesign-3')" disabled="true">
+						<input value="Lesson 4" class="check-room-input check-class-input" type="button" onclick="play('webdesign-4')" disabled="true">
+						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" type="button" onclick="play('webdesign-r1')">
+						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" type="button" onclick="play('webdesign-r2')" disabled="true">
+					  </div>
+					</div>		
+					
+				  <div class="dropdown">
+                  <button class="check-room-btn btn-with-highlighter" style="height: 60px; margin-top: 20px;" onclick="myFunction3()">
+                    <div class="extra-big-text" style="margin-top: -2px;">Gaming &nbsp;<i class="fa fa-angle-down"></i>
+                    </div>
+                  </button>
+					  <div id="myDropdown3" class="dropdown-content">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('gaming-1')" disabled="true">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('gaming-2')" disabled="true">
+						<input value="Lesson 3" class="check-room-input check-class-input" type="button" onclick="play('gaming-3')" disabled="true">
+						<input value="Lesson 4" class="check-room-input check-class-input" type="button" onclick="play('gaming-4')" disabled="true">
+						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" type="button" onclick="play('gaming-r1')">
+						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" type="button" onclick="play('gaming-r2')" disabled="true">
+					  </div>
+					</div>	
+					
+				  <div class="dropdown">
+                  <button class="check-room-btn btn-with-highlighter" style="height: 60px; margin-top: 20px;" onclick="myFunction4()">
+                    <div class="extra-big-text" style="margin-top: -2px;">CIW IBA &nbsp;<i class="fa fa-angle-down"></i>
+                    </div>
+                  </button>
+					  <div id="myDropdown4" class="dropdown-content">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('iba-1')" disabled="true">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('iba-2')" disabled="true">
+						<input value="Lesson 3" class="check-room-input check-class-input" type="button" onclick="play('iba-3')" disabled="true">
+						<input value="Lesson 4" class="check-room-input check-class-input" type="button" onclick="play('iba-4')" disabled="true">
+						<input value="Lesson 5" class="check-room-input check-class-input" type="button" onclick="play('iba-5')" disabled="true">
+						<input value="Lesson 6" class="check-room-input check-class-input" type="button" onclick="play('iba-6')" disabled="true">
+						<input value="Lesson 7" class="check-room-input check-class-input" type="button" onclick="play('iba-7')" disabled="true">
+						<input value="Lesson 8" class="check-room-input check-class-input" type="button" onclick="play('iba-8')" disabled="true">
+						<input value="Lesson 9" class="check-room-input check-class-input" type="button" onclick="play('iba-9')" disabled="true">
+						<input value="Lesson 10" class="check-room-input check-class-input" type="button" onclick="play('iba-10')" disabled="true">
+						<input value="Review (Quick)" class="check-room-input check-class-input" type="button" onclick="play('iba-r1')">
+						<input value="Review (Advanced)" class="check-room-input check-class-input" type="button" onclick="play('iba-r2')" disabled="true">
+						<input value="Review (WTF is this?!?!)" class="check-room-input check-class-input" type="button" onclick="play('iba-r3')" disabled="true">
+					  </div>
+					</div>	
 					
                 </div>
-
-
               </div>
-            </div>
+		  </div>
           </div>
         </div>
       </div>
@@ -5694,22 +5758,42 @@
 	  
 		function myFunction() {
 			document.getElementById("myDropdown").classList.toggle("show");
+			document.getElementById("myDropdown1").classList.remove("show");
+			document.getElementById("myDropdown2").classList.remove("show");
+			document.getElementById("myDropdown3").classList.remove("show");
+			document.getElementById("myDropdown4").classList.remove("show");
 		}
 
 		function myFunction1() {
 			document.getElementById("myDropdown1").classList.toggle("show");
+			document.getElementById("myDropdown").classList.remove("show");
+			document.getElementById("myDropdown2").classList.remove("show");
+			document.getElementById("myDropdown3").classList.remove("show");
+			document.getElementById("myDropdown4").classList.remove("show");
 		}
 		
 		function myFunction2() {
 			document.getElementById("myDropdown2").classList.toggle("show");
+			document.getElementById("myDropdown1").classList.remove("show");
+			document.getElementById("myDropdown").classList.remove("show");
+			document.getElementById("myDropdown3").classList.remove("show");
+			document.getElementById("myDropdown4").classList.remove("show");
 		}
 		
 		function myFunction3() {
 			document.getElementById("myDropdown3").classList.toggle("show");
+			document.getElementById("myDropdown1").classList.remove("show");
+			document.getElementById("myDropdown2").classList.remove("show");
+			document.getElementById("myDropdown").classList.remove("show");
+			document.getElementById("myDropdown4").classList.remove("show");
 		}
 		
 		function myFunction4() {
 			document.getElementById("myDropdown4").classList.toggle("show");
+			document.getElementById("myDropdown1").classList.remove("show");
+			document.getElementById("myDropdown2").classList.remove("show");
+			document.getElementById("myDropdown3").classList.remove("show");
+			document.getElementById("myDropdown").classList.remove("show");
 		}
 		
 		function play(game) {
