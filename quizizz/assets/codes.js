@@ -155,7 +155,7 @@
 				error = "false";
 				return "000000";
 			} else
-			if (game == "iba-r3") { // review v2
+			if (game == "iba-r3") { // review v3
 				error = "false";
 				return "000000";
 			}
