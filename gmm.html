@@ -14,18 +14,23 @@
 		
 		<script>
 			$(document).ready(function(){
-				var d = new Date();
-				var year = d.getFullYear();
-				var month = d.getMonth() + 1;
-				var date = d.getDate();
-				if (month <= 9) {month = "0" + month;}
-				if(date <= 9){date = "0" + date;}
+				var epi = window.location.hash.substr(0).replace("#", "");
+				if (epi != null && epi != "null" && epi != "" && epi != "undefined" && epi != undefined) { location.href = "http://bit.ly/GMM" + epi;} else {
 				
-				document.getElementById("d2").value = (year + "-" + month + "-" + date);
-				var d1 = $('#d1').val();
-				var d2 = $('#d2').val();
-				var d3 = workingDaysBetweenDates(d1,d2);
-				location.href = "http://bit.ly/GMM" + (1247 + d3);
+					var d = new Date();
+					var year = d.getFullYear();
+					var month = d.getMonth() + 1;
+					var date = d.getDate();
+					if (month <= 9) {month = "0" + month;}
+					if (date <= 9) {date = "0" + date;}
+					
+					document.getElementById("d2").value = (year + "-" + month + "-" + date);
+					var d1 = $('#d1').val();
+					var d2 = $('#d2').val();
+					var d3 = workingDaysBetweenDates(d1,d2);
+					location.href = "http://bit.ly/GMM" + (1247 + d3);
+					
+				}
 			});
 
 			function workingDaysBetweenDates(d0, d1) {
