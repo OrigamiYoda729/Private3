@@ -5626,11 +5626,11 @@
 
 		.show {display:block;}
 		
-		input[disabled=true] {
+		.disabled {
 			cursor: not-allowed;
 		}
 		
-		input[disabled=true]:hover {
+		.disabled:hover {
 			background-color: #e5e5e5 !important;
 		}
 	</style>
@@ -5672,10 +5672,10 @@
                     </div>
                   </button>
 					  <div id="myDropdown" class="dropdown-content">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('multimedia-1')">
-						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('multimedia-2')" disabled="true">
-						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" type="button" onclick="play('multimedia-r1')">
-						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" type="button" onclick="play('multimedia-r2')" disabled="true">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" id="multimedia-1" onclick="play('multimedia-1')">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" id="multimedia-2" onclick="play('multimedia-2')">
+						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" id="multimedia-r1" type="button" onclick="play('multimedia-r1')">
+						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" id="multimedia-r2" type="button" onclick="play('multimedia-r2')">
 					  </div>
 					</div>
 					
@@ -5685,14 +5685,14 @@
                     </div>
                   </button>
 					  <div id="myDropdown1" class="dropdown-content">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('programming-1')" disabled="true">
-						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('programming-2')" disabled="true">
-						<input value="Lesson 3" class="check-room-input check-class-input" type="button" onclick="play('programming-3')" disabled="true">
-						<input value="Lesson 4" class="check-room-input check-class-input" type="button" onclick="play('programming-4')" disabled="true">
-						<input value="Lesson 5" class="check-room-input check-class-input" type="button" onclick="play('programming-5')" disabled="true">
-						<input value="Lesson 6" class="check-room-input check-class-input" type="button" onclick="play('programming-6')" disabled="true">
-						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" type="button" onclick="play('programming-r1')">
-						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" type="button" onclick="play('programming-r2')" disabled="true">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" id="programming-1" onclick="play('programming-1')">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" id="programming-2" onclick="play('programming-2')">
+						<input value="Lesson 3" class="check-room-input check-class-input" type="button" id="programming-3" onclick="play('programming-3')">
+						<input value="Lesson 4" class="check-room-input check-class-input" type="button" id="programming-4" onclick="play('programming-4')">
+						<input value="Lesson 5" class="check-room-input check-class-input" type="button" id="programming-5" onclick="play('programming-5')">
+						<input value="Lesson 6" class="check-room-input check-class-input" type="button" id="programming-6" onclick="play('programming-6')">
+						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" id="programming-r1" type="button" onclick="play('programming-r1')">
+						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" id="programming-r2" type="button" onclick="play('programming-r2')">
 					  </div>
 					</div>		
 					
@@ -5702,12 +5702,12 @@
                     </div>
                   </button>
 					  <div id="myDropdown2" class="dropdown-content">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('webdesign-1')" disabled="true">
-						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('webdesign-2')" disabled="true">
-						<input value="Lesson 3" class="check-room-input check-class-input" type="button" onclick="play('webdesign-3')" disabled="true">
-						<input value="Lesson 4" class="check-room-input check-class-input" type="button" onclick="play('webdesign-4')" disabled="true">
-						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" type="button" onclick="play('webdesign-r1')">
-						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" type="button" onclick="play('webdesign-r2')" disabled="true">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" id="webdesign-1" onclick="play('webdesign-1')">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" id="webdesign-2" onclick="play('webdesign-2')">
+						<input value="Lesson 3" class="check-room-input check-class-input" type="button" id="webdesign-3" onclick="play('webdesign-3')">
+						<input value="Lesson 4" class="check-room-input check-class-input" type="button" id="webdesign-4" onclick="play('webdesign-4')">
+						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" id="webdesign-r1" type="button" onclick="play('webdesign-r1')">
+						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" id="webdesign-r2" type="button" onclick="play('webdesign-r2')">
 					  </div>
 					</div>		
 					
@@ -5717,12 +5717,12 @@
                     </div>
                   </button>
 					  <div id="myDropdown3" class="dropdown-content">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('gaming-1')" disabled="true">
-						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('gaming-2')" disabled="true">
-						<input value="Lesson 3" class="check-room-input check-class-input" type="button" onclick="play('gaming-3')" disabled="true">
-						<input value="Lesson 4" class="check-room-input check-class-input" type="button" onclick="play('gaming-4')" disabled="true">
-						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" type="button" onclick="play('gaming-r1')">
-						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" type="button" onclick="play('gaming-r2')" disabled="true">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" id="gaming-1" onclick="play('gaming-1')">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" id="gaming-2" onclick="play('gaming-2')">
+						<input value="Lesson 3" class="check-room-input check-class-input" type="button" id="gaming-3" onclick="play('gaming-3')">
+						<input value="Lesson 4" class="check-room-input check-class-input" type="button" id="gaming-4" onclick="play('gaming-4')">
+						<input value="Review (from ICT 2.0)" class="check-room-input check-class-input" id="gaming-r1" type="button" onclick="play('gaming-r1')">
+						<input value="Review (from ICT 3.0)" class="check-room-input check-class-input" id="gaming-r2" type="button" onclick="play('gaming-r2')">
 					  </div>
 					</div>	
 					
@@ -5732,19 +5732,19 @@
                     </div>
                   </button>
 					  <div id="myDropdown4" class="dropdown-content">
-						<input value="Lesson 1" class="check-room-input check-class-input" type="button" onclick="play('iba-1')" disabled="true">
-						<input value="Lesson 2" class="check-room-input check-class-input" type="button" onclick="play('iba-2')" disabled="true">
-						<input value="Lesson 3" class="check-room-input check-class-input" type="button" onclick="play('iba-3')" disabled="true">
-						<input value="Lesson 4" class="check-room-input check-class-input" type="button" onclick="play('iba-4')" disabled="true">
-						<input value="Lesson 5" class="check-room-input check-class-input" type="button" onclick="play('iba-5')" disabled="true">
-						<input value="Lesson 6" class="check-room-input check-class-input" type="button" onclick="play('iba-6')" disabled="true">
-						<input value="Lesson 7" class="check-room-input check-class-input" type="button" onclick="play('iba-7')" disabled="true">
-						<input value="Lesson 8" class="check-room-input check-class-input" type="button" onclick="play('iba-8')" disabled="true">
-						<input value="Lesson 9" class="check-room-input check-class-input" type="button" onclick="play('iba-9')" disabled="true">
-						<input value="Lesson 10" class="check-room-input check-class-input" type="button" onclick="play('iba-10')" disabled="true">
-						<input value="Review (Quick)" class="check-room-input check-class-input" type="button" onclick="play('iba-r1')">
-						<input value="Review (Advanced)" class="check-room-input check-class-input" type="button" onclick="play('iba-r2')" disabled="true">
-						<input value="Review (WTF is this?!?!)" class="check-room-input check-class-input" type="button" onclick="play('iba-r3')" disabled="true">
+						<input value="Lesson 1" class="check-room-input check-class-input" type="button" id="iba-1" onclick="play('iba-1')">
+						<input value="Lesson 2" class="check-room-input check-class-input" type="button" id="iba-2" onclick="play('iba-2')">
+						<input value="Lesson 3" class="check-room-input check-class-input" type="button" id="iba-3" onclick="play('iba-3')">
+						<input value="Lesson 4" class="check-room-input check-class-input" type="button" id="iba-4" onclick="play('iba-4')">
+						<input value="Lesson 5" class="check-room-input check-class-input" type="button" id="iba-5" onclick="play('iba-5')">
+						<input value="Lesson 6" class="check-room-input check-class-input" type="button" id="iba-6" onclick="play('iba-6')">
+						<input value="Lesson 7" class="check-room-input check-class-input" type="button" id="iba-7" onclick="play('iba-7')">
+						<input value="Lesson 8" class="check-room-input check-class-input" type="button" id="iba-8" onclick="play('iba-8')">
+						<input value="Lesson 9" class="check-room-input check-class-input" type="button" id="iba-9" onclick="play('iba-9')">
+						<input value="Lesson 10" class="check-room-input check-class-input" type="button" id="iba-10" onclick="play('iba-10')">
+						<input value="Review (Quick)" class="check-room-input check-class-input" id="iba-r1" type="button" onclick="play('iba-r1')">
+						<input value="Review (Advanced)" class="check-room-input check-class-input" id="iba-r2" type="button" onclick="play('iba-r2')">
+						<input value="Review (WTF is this?!?!)" class="check-room-input check-class-input" id="iba-r3" type="button" onclick="play('iba-r3')">
 					  </div>
 					</div>	
                 </div>
@@ -5753,6 +5753,7 @@
           </div>
         </div>
       </div>
+	  <script src="assets/codes.js"></script>
 	  <script>
 	  
 		function myFunction() {
