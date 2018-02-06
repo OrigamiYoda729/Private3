@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/blood.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'reveal/stylesheet';
+			link.type = 'reveal/text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+			}
+
+			.column {
+				float: left;
+				width: 50%;
+				padding: 10px;
+				text-align: left;
+			}
+			
+			.column ul {
+				padding-top: 20px;
+				padding-left: 30px
+			}
+			
+			.column li {
+				font-size: 0.75em !important;
+			}
+
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Submit Your Certification</h3>
+					<p>After completing your certification test, you must submit your Certificate of Completion in order to officially recieve your certification. To learn how to submit it, click the right-facing arrow.</p>
+				</section>
+				<section>
+					<h6 style="margin-bottom: 7.5px;">Step 1:</h6>
+					<h3 style="margin-bottom: 0.25em;">Accessing Your Certificate</h3>
+					<div class="row">
+						<div class="column">
+							<ul>
+								<li>hello</li>
+								<li>world</li>
+							</ul>
+						</div>
+						<div class="column">
+							<img src="what.png" style="height: 100%; width: 100%;"></img>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
