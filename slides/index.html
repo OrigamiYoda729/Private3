@@ -13,9 +13,13 @@
 		<link rel="stylesheet" href="reveal-js/lib/css/zenburn.css">
 		
 		<script src="https://use.fontawesome.com/4db924c22d.js"></script>
+		<script>
+			var epi = window.location.hash.substr(0).replace("#", "");
+			if (epi != null && epi != "null" && epi != "" && epi != "undefined" && epi != undefined && epi >= 0) { location.href = "#/" + epi;}
+		</script>
 
 		<!-- Printing and PDF exports -->
-		<script>
+		<script>			
 			var link = document.createElement( 'link' );
 			link.rel = 'reveal-js/stylesheet';
 			link.type = 'reveal-js/text/css';
