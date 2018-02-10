@@ -3,6 +3,7 @@
 
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="icon" type="image/png" href="assets/favicon-quizizz.png">
     <style type="text/css">
       /*!
       * animate.css -http://daneden.me/animate
@@ -4833,10 +4834,6 @@
       .theme-space .page-container[data-v-4521f52e] {
         margin-top: 50px;
       }
-      
-      .page-container > .screen[data-v-4521f52e] {
-        height: 100%;
-      }
 
     </style>
     <style type="text/css">
@@ -4936,7 +4933,6 @@
         border-radius: 8px;
         padding: 24px 20px;
         box-sizing: border-box;
-        position: absolute;
         top: 0px;
         left: calc(50% - 155px);
         max-width: 310px;
@@ -5624,7 +5620,9 @@
 		
 		.dropdown a:hover {background-color: #ddd}
 
-		.show {display:block;}
+		div.show {
+			display: block;
+		}
 		
 		.disabled {
 			cursor: not-allowed;
@@ -5633,6 +5631,11 @@
 		.disabled:hover {
 			background-color: #e5e5e5 !important;
 		}
+		
+		body.show {
+			overflow: hidden;
+		}
+		
 	</style>
 	<script src="https://use.fontawesome.com/4db924c22d.js"></script>
   </head>
@@ -5642,10 +5645,6 @@
       <div class="app-container">
         <div data-v-404a90e7="" class="header animated fadeInDown anim-300-duration">
           <div data-v-404a90e7="" class="left-section">
-            <div data-v-404a90e7="" tooltip="Settings" flow="right" class="menu-icon animated fadeIn anim-300-duration">
-              <div data-v-404a90e7="" class="menu-icon-image" style="display: none !important;">
-              </div>
-            </div>
             <!---->
           </div>
           <div data-v-404a90e7="" class="middle-section animated fadeIn anim-300-duration">
@@ -5662,7 +5661,7 @@
                   <!---->
                   <!---->
                 </div>
-                <div class="join-widget widget-gamecode" style="margin: 25px auto 0 auto;">
+                <div class="join-widget widget-gamecode" style="margin: 35px auto 35px auto;">
                   <div class="widget-title"><h2>Select a Game</h2>
                   </div>
 				  
