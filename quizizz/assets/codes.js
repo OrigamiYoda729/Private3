@@ -5,7 +5,7 @@
 		// mutlimedia
 			if (game == "multimedia-1") {   // lesson 1
 				error = "false";
-				return "000000";
+				return "501316";
 			} else
 			if (game == "multimedia-2") {   // lesson 2
 				error = "nocode";
@@ -13,7 +13,7 @@
 			} else
 			if (game == "multimedia-r1") {   // lesson v1
 				error = "false";
-				return "000000";
+				return "245493";
 			} else
 			if (game == "multimedia-r2") {   // review v2
 				error = "false";
