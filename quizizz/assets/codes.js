@@ -13,7 +13,7 @@
 			} else
 			if (game == "multimedia-r1") {   // lesson v1
 				error = "false";
-				return "196857";
+				return "000000";
 			} else
 			if (game == "multimedia-r2") {   // review v2
 				error = "false";
