@@ -16,15 +16,15 @@ var helper = (function() {
       if (authResult.isSignedIn.get()) {
         $('#authOps').show('slow');
         $('#gConnect').hide();
+		$('#main-content').show();
         helper.profile();
       } else {
           if (authResult['error'] || authResult.currentUser.get().getAuthResponse() == null) {
-            // There was an error, which means the user is not signed in.
-            // As an example, you can handle by writing to the console:
             console.log('There was an error: ' + authResult['error']);
           }
           $('#authResult').append('Logged out');
           $('#authOps').hide('slow');
+		  $('#main-content').hide();
           $('#gConnect').show();
       }
 
