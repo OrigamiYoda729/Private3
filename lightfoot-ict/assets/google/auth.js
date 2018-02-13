@@ -1,13 +1,6 @@
-
 var auth2 = {};
 var helper = (function() {
   return {
-    /**
-     * Hides the sign in button and starts the post-authorization operations.
-     *
-     * @param {Object} authResult An Object which contains the access token and
-     *   other authentication information.
-     */
     onSignInCallback: function(authResult) {
       $('#authResult').html('Auth Result:<br/>');
       for (var field in authResult) {
@@ -18,7 +11,6 @@ var helper = (function() {
         $('#main-content').show('slow');
         $('#gConnect').hide();
         helper.profile();
-        helper.people();
       } else {
           if (authResult['error'] || authResult.currentUser.get().getAuthResponse() == null) {
             // There was an error, which means the user is not signed in.
@@ -31,16 +23,9 @@ var helper = (function() {
       }
       console.log('authResult', authResult);
     },
-    /**
-     * Calls the OAuth2 endpoint to disconnect the app for the user.
-     */
     disconnect: function() {
-      // Revoke the access token.
       auth2.disconnect();
     },
-    /**
-     * Gets and renders the list of people visible to this app.
-     */
     people: function() {
       gapi.client.plus.people.list({
         'userId': 'me',
@@ -56,9 +41,6 @@ var helper = (function() {
         }
       });
     },
-    /**
-     * Gets and renders the currently signed in user's profile data.
-     */
     profile: function(){
       gapi.client.plus.people.get({
         'userId': 'me'
@@ -90,9 +72,6 @@ var helper = (function() {
     }
   };
 })();
-/**
- * jQuery initialization
- */
 $(document).ready(function() {
   $('#disconnect').click(helper.disconnect);
   $('#loaderror').hide();
@@ -104,11 +83,6 @@ $(document).ready(function() {
     );
   }
 });
-/**
- * Handler for when the sign-in state changes.
- *
- * @param {boolean} isSignedIn The new signed in state.
- */
 var updateSignIn = function() {
   console.log('update sign in state');
   if (auth2.isSignedIn.get()) {
@@ -119,9 +93,6 @@ var updateSignIn = function() {
     helper.onSignInCallback(gapi.auth2.getAuthInstance());
   }
 }
-/**
- * This method sets up the sign-in listener after the client library loads.
- */
 function startApp() {
   gapi.load('auth2', function() {
     gapi.client.load('plus','v1').then(function() {
