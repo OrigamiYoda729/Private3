@@ -8,23 +8,16 @@ var helper = (function() {
      *   other authentication information.
      */
     onSignInCallback: function(authResult) {
-      $('#authResult').html('Auth Result:<br/>');
-      for (var field in authResult) {
-        $('#authResult').append(' ' + field + ': ' +
-            authResult[field] + '<br/>');
-      }
       if (authResult.isSignedIn.get()) {
         $('#authOps').show('slow');
         $('#gConnect').hide();
-		$('#main-content').show();
         helper.profile();
+        helper.people();
       } else {
           if (authResult['error'] || authResult.currentUser.get().getAuthResponse() == null) {
             console.log('There was an error: ' + authResult['error']);
           }
-          $('#authResult').append('Logged out');
           $('#authOps').hide('slow');
-		  $('#main-content').hide();
           $('#gConnect').show();
       }
 
@@ -39,6 +32,21 @@ var helper = (function() {
       auth2.disconnect();
     },
 
+    /**
+     * Gets and renders the list of people visible to this app.
+     */
+    people: function() {
+      gapi.client.plus.people.list({
+        'userId': 'me',
+        'collection': 'visible'
+      }).then(function(res) {
+        var people = res.result;
+      });
+    },
+
+    /**
+     * Gets and renders the currently signed in user's profile data.
+     */
     profile: function(){
       gapi.client.plus.people.get({
         'userId': 'me'
@@ -46,6 +54,7 @@ var helper = (function() {
         var profile = res.result;
       }, function(err) {
         var error = err.result;
+        $('#profile').empty();
       });
     }
   };
