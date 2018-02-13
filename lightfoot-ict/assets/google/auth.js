@@ -8,6 +8,11 @@ var helper = (function() {
      *   other authentication information.
      */
     onSignInCallback: function(authResult) {
+      $('#authResult').html('Auth Result:<br/>');
+      for (var field in authResult) {
+        $('#authResult').append(' ' + field + ': ' +
+            authResult[field] + '<br/>');
+      }
       if (authResult.isSignedIn.get()) {
         $('#authOps').show('slow');
         $('#gConnect').hide();
@@ -15,8 +20,11 @@ var helper = (function() {
         helper.people();
       } else {
           if (authResult['error'] || authResult.currentUser.get().getAuthResponse() == null) {
+            // There was an error, which means the user is not signed in.
+            // As an example, you can handle by writing to the console:
             console.log('There was an error: ' + authResult['error']);
           }
+          $('#authResult').append('Logged out');
           $('#authOps').hide('slow');
           $('#gConnect').show();
       }
@@ -41,6 +49,13 @@ var helper = (function() {
         'collection': 'visible'
       }).then(function(res) {
         var people = res.result;
+        $('#visiblePeople').empty();
+        $('#visiblePeople').append('Number of people visible to this app: ' +
+            people.totalItems + '<br/>');
+        for (var personIndex in people.items) {
+          person = people.items[personIndex];
+          $('#visiblePeople').append('<img src="' + person.image.url + '">');
+        }
       });
     },
 
@@ -52,9 +67,28 @@ var helper = (function() {
         'userId': 'me'
       }).then(function(res) {
         var profile = res.result;
+        console.log(profile);
+        $('#profile').empty();
+        $('#profile').append(
+            $('<p><img src=\"' + profile.image.url + '\"></p>'));
+        $('#profile').append(
+            $('<p>Hello ' + profile.displayName + '!<br />Tagline: ' +
+            profile.tagline + '<br />About: ' + profile.aboutMe + '</p>'));
+        if (profile.emails) {
+          $('#profile').append('<br/>Emails: ');
+          for (var i=0; i < profile.emails.length; i++){
+            $('#profile').append(profile.emails[i].value).append(' ');
+          }
+          $('#profile').append('<br/>');
+        }
+        if (profile.cover && profile.coverPhoto) {
+          $('#profile').append(
+              $('<p><img src=\"' + profile.cover.coverPhoto.url + '\"></p>'));
+        }
       }, function(err) {
         var error = err.result;
         $('#profile').empty();
+        $('#profile').append(error.message);
       });
     }
   };
