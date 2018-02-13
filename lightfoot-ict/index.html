@@ -7,7 +7,9 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]--> 
+		<meta name="google-signin-client_id" content="588829739311-pu6een0ra6o6u109944ha9epuetealom.apps.googleusercontent.com"></meta>
+		<script src="assets/js/jquery.min.js"></script>
 	</head>
 	<body>
 		
@@ -15,7 +17,7 @@
 			<div id="signin-button"></div>
 		</div>
 	  
-		<div id="main-content">
+		<div id="main-content" style="display: none;">
 		
 			<!-- Header -->
 				<div id="header">
@@ -84,7 +86,7 @@
 								</header>
 
 								<footer>
-									<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
+									<button class="button" id="signout" onclick="">Logout</button>
 								</footer>
 
 							</div>
@@ -215,14 +217,8 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
 			<script src="assets/google/auth.js"></script>
+			<script src="https://apis.google.com/js/client:platform.js?onload=startApp"></script>
 
 	</body>
 </html>
