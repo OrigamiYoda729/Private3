@@ -1,3 +1,4 @@
+
 var auth2 = {};
 var helper = (function() {
   return {
@@ -25,13 +26,11 @@ var helper = (function() {
             console.log('There was an error: ' + authResult['error']);
           }
           $('#authResult').append('Logged out');
-          $('#gConnect').show();
           $('#main-content').hide('slow');
+          $('#gConnect').show();
       }
-
       console.log('authResult', authResult);
     },
-
     /**
      * Calls the OAuth2 endpoint to disconnect the app for the user.
      */
@@ -39,7 +38,6 @@ var helper = (function() {
       // Revoke the access token.
       auth2.disconnect();
     },
-
     /**
      * Gets and renders the list of people visible to this app.
      */
@@ -58,7 +56,6 @@ var helper = (function() {
         }
       });
     },
-
     /**
      * Gets and renders the currently signed in user's profile data.
      */
@@ -93,7 +90,6 @@ var helper = (function() {
     }
   };
 })();
-
 /**
  * jQuery initialization
  */
@@ -108,7 +104,6 @@ $(document).ready(function() {
     );
   }
 });
-
 /**
  * Handler for when the sign-in state changes.
  *
@@ -124,7 +119,6 @@ var updateSignIn = function() {
     helper.onSignInCallback(gapi.auth2.getAuthInstance());
   }
 }
-
 /**
  * This method sets up the sign-in listener after the client library loads.
  */
