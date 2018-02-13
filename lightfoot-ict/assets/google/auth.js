@@ -8,7 +8,7 @@ var helper = (function() {
             authResult[field] + '<br/>');
       }
       if (authResult.isSignedIn.get()) {
-        $('#main-content').show('slow');
+        $('#main-content').show();
         $('#gConnect').hide();
         helper.profile();
       } else {
@@ -18,7 +18,7 @@ var helper = (function() {
             console.log('There was an error: ' + authResult['error']);
           }
           $('#authResult').append('Logged out');
-          $('#main-content').hide('slow');
+          $('#main-content').hide();
           $('#gConnect').show();
       }
       console.log('authResult', authResult);
