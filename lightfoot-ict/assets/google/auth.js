@@ -14,7 +14,7 @@ var helper = (function() {
             authResult[field] + '<br/>');
       }
       if (authResult.isSignedIn.get()) {
-        $('main-content').show('slow');
+        $('#main-content').show('slow');
         $('#gConnect').hide();
         helper.profile();
         helper.people();
@@ -26,7 +26,7 @@ var helper = (function() {
           }
           $('#authResult').append('Logged out');
           $('#gConnect').show();
-          $('main-content').hide('slow');
+          $('#main-content').hide('slow');
       }
 
       console.log('authResult', authResult);
