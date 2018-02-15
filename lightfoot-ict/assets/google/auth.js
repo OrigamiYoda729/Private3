@@ -6,6 +6,7 @@
 				if (authResult.isSignedIn.get()) {
 					$('#main-content').show();
 					$('#gConnect').hide();
+					document.getElementById("main-content").contentWindow.loggedin();
 					helper.profile();
 				} else {
 					if (authResult['error'] || authResult.currentUser.get().getAuthResponse() == null) {
