@@ -9,7 +9,7 @@
 						authResult[field] + '<br/>');
 				}
 				if (authResult.isSignedIn.get()) {
-					$('#authOps').show('slow');
+					$('#main-content').show('slow');
 					$('#gConnect').hide();
 					helper.profile();
 					helper.people();
@@ -18,7 +18,7 @@
 						console.log('There was an error: ' + authResult['error']);
 					}
 					$('#authResult').append('Logged out');
-					$('#authOps').hide('slow');
+					$('#main-content').hide('slow');
 					$('#gConnect').show();
 				}
 				console.log('authResult', authResult);
