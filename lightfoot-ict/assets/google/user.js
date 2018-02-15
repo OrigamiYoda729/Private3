@@ -1,4 +1,4 @@
 
 	function loggedin() {
-		alert("logged in");
+		var fname = parent.profile.givenName;
 	}
