@@ -3,7 +3,7 @@
 		
 		var profile = googleUser.getBasicProfile();
 		var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
-		var frame = $("#main-content").contentWindow;
+		var frame = document.getElementById("main-content").contentWindow;
 		
 		$('#main-content').show();
 		$('#gConnect').hide();
