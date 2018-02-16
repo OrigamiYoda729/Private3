@@ -43,7 +43,7 @@
 								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+								<li><a href="javascript:void(0)" onclick="parent.signOut()" id="logout-link" class="skel-layers-ignoreHref"><span class="icon fa-sign-out">Logout</span></a></li>
 							</ul>
 						</nav>
 
@@ -72,13 +72,13 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt"><strong>Welcome back, <span>{firstName}</span>.</h2>
+								<h2 class="alt"><strong>Welcome back, <span class="auth">{firstName}</span>.</h2>
 								<p>Ligula scelerisque justo sem accumsan diam quis<br />
 								vitae natoque dictum sollicitudin elementum.</p>
 							</header>
 
 							<footer>
-								<a href="javascript:void(0)" onclick="parent.signOut()" class="button scrolly">Magna Aliquam</a>
+								<a href="#main" class="button scrolly">Magna Aliquam</a>
 							</footer>
 
 						</div>

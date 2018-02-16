@@ -9,10 +9,10 @@
 		var profileImage = input[4];
 		var userEmail = input[5];
 		
-		for (i = 0; i < document.getElementsByTagName("span").length; i++) {
+		for (i = 0; i < document.getElementsByClassName("auth").length; i++) {
 			for (j = 0; j < profileValues.length; j++) {
-				if (document.getElementsByTagName("span")[i].innerHTML == "{" + profileValues[j] + "}") {
-					document.getElementsByTagName("span")[i].innerHTML = profile[j];
+				if (document.getElementsByClassName("auth")[i].innerHTML == "{" + profileValues[j] + "}") {
+					document.getElementsByClassName("auth")[i].innerHTML = profile[j];
 				}
 			}
 		}
