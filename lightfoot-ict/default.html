@@ -19,8 +19,8 @@
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48" style="border-radius: 3px;"><img class="img-auth" src="images/avatar.jpg" style="background-color: #eee; border-radius: 3px;" alt="" /></span>
-							<h1 id="title">Jane Doe</h1>
-							<p>Hyperspace Engineer</p>
+							<h1 id="title" class="auth">{displayName}</h1>
+							<p class="auth">{userEmail}</p>
 						</div>
 
 					<!-- Nav -->
@@ -28,8 +28,8 @@
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
 								<li><a href="#dashboard" id="dashboard-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Dashboard</span></a></li>
+								<li><a href="#quizizz" id="quizizz-link" class="skel-layers-ignoreHref"><span class="icon fa-pencil">Take Quizizz</span></a></li>
 								<li><a href="#answers" id="learn-link" class="skel-layers-ignoreHref"><span class="icon fa-book">Answers</span></a></li>
-								<li><a href="#quizizz" id="quizizz-link" class="skel-layers-ignoreHref"><span class="icon fa-pencil">Quizizz</span></a></li>
 							</ul>
 						</nav>
 
@@ -55,24 +55,25 @@
 
 							<header>
 								<h2 class="alt"><strong>Welcome back, <span class="auth">{firstName}</span>.</h2>
-								<p>Ligula scelerisque justo sem accumsan diam quis<br />
-								vitae natoque dictum sollicitudin elementum.</p>
+								<p>{firstName}, welcome to the all-new interface<br />
+								for Mr. McCrimmon's class. Here you can study,<br />
+								take practice Quizizz, get answers, and more.</p>
 							</header>
 
 							<footer>
-								<a href="#main" class="button scrolly">Magna Aliquam</a>
+								<a href="#dashboard" class="button scrolly">Get Started</a>
 							</footer>
 
 						</div>
 					</section>
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
+				<!-- Dashboard -->
+					<section id="dashboard" class="two">
 						<div class="container">
 
 							<header>
 								<br />
-								<h2>Portfolio</h2>
+								<h2>Dashboard</h2>
 							</header>
 
 							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
@@ -128,12 +129,12 @@
 						</div>
 					</section>
 
-				<!-- About Me -->
-					<section id="about" class="three">
+				<!-- Quizizz -->
+					<section id="quizizz" class="three">
 						<div class="container">
 
 							<header>
-								<h2>About Me</h2>
+								<h2>Quizizz</h2>
 							</header>
 
 							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
@@ -148,12 +149,12 @@
 						</div>
 					</section>
 
-				<!-- Contact -->
-					<section id="contact" class="four">
+				<!-- Answers -->
+					<section id="answers" class="four">
 						<div class="container">
 
 							<header>
-								<h2>Contact</h2>
+								<h2>Answers</h2>
 							</header>
 
 							<p>Elementum sem parturient nulla quam placerat viverra
