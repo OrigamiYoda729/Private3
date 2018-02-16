@@ -16,4 +16,8 @@
 				}
 			}
 		}
+		
+		for (i = 0; i < document.getElementsByClassName("img-auth").length; i++) {
+			document.getElementsByClassName("img-auth").src = profileImage;
+		}
 	}
