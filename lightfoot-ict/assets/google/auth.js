@@ -2,17 +2,12 @@
 	function onSignIn(googleUser) {
 		
 		var profile = googleUser.getBasicProfile();
-		console.log('Profile: ' + profile);
-		console.log('ID: ' + profile.getId());
-		console.log('Name: ' + profile.getName());
-		console.log('Image URL: ' + profile.getImageUrl());
-		console.log('Email: ' + profile.getEmail());
-		var data = [profile.getId(), profile.getName(), profile.getImageUrl(), profile.getEmail()];
+		var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
+		var frame = $("#main-content").contentWindow;
 		
 		$('#main-content').show();
 		$('#gConnect').hide();
 		
-		var frame = document.getElementById("main-content").contentWindow;
 		frame.loggedin(data)
 	}
 	
