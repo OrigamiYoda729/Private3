@@ -10,7 +10,7 @@
 		$('#main-content').show();
 		$('#gConnect').hide();
 		
-		loggedin()
+		document.getElementById("main-content").contentWindow.loggedin()
 	}
 	
 	function signOut() {
