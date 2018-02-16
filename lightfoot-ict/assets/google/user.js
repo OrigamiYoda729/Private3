@@ -29,12 +29,6 @@
 		ul = document.getElementById("searchResults");
 		li = ul.getElementsByTagName("li");
 		
-		if (input.value != null && input.value != "") {
-			ul.style.display = "";    	
-		} else {
-			ul.style.display = "none";	
-		}
-		
 		for (i = 0; i < li.length; i++) {
 			a = li[i].getElementsByTagName("a")[0];
 			if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {

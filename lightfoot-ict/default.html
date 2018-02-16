@@ -30,7 +30,7 @@
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
 								<li><a href="#dashboard" id="dashboard-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Dashboard</span></a></li>
 								<li><a href="#quizizz" id="quizizz-link" class="skel-layers-ignoreHref"><span class="icon fa-pencil">Take Quizizz</span></a></li>
-								<li><a href="#answers" id="learn-link" class="skel-layers-ignoreHref"><span class="icon fa-book">Answers</span></a></li>
+								<li><a href="#coursehelp" id="learn-link" class="skel-layers-ignoreHref"><span class="icon fa-book">Course Help</span></a></li>
 							</ul>
 						</nav>
 
@@ -77,56 +77,20 @@
 								<h2>Dashboard</h2>
 							</header>
 
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
+							<input type="text" id="searchBox" onkeyup="search()" placeholder="Search for applications..." title="Type in a name.">
+							
+							<ul id="searchResults">
+								<li><a href="#">Adele</a></li>
+								<li><a href="#">Agnes</a></li>
 
-							<div class="row">
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
+								<li><a href="#">Billy</a></li>
+								<li><a href="#">Bob</a></li>
 
+								<li><a href="#">Calvin</a></li>
+								<li><a href="#">Christina</a></li>
+								<li><a href="#">Cindy</a></li>
+							</ul>
+							
 						</div>
 						
 						<br />
@@ -140,8 +104,8 @@
 							<header>
 								<h2>Quizizz</h2>
 							</header>
-
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+							
+							<p>Use Quizizz to study for your upcoming certification test or as an easy way to quickly learn the course. Select a subject and a lesson and you're good to go!
 							
 							<div id="dd" class="wrapper-dropdown-5" tabindex="1">John Doe
 								<ul class="dropdown">
@@ -150,6 +114,18 @@
 									<li><a href="#"><i class="icon-remove"></i>Log out</a></li>
 								</ul>
 							</div>
+							
+							<p style="float: left; margin-top: 10px; margin-left: 75px;"><i class="fa fa-arrow-right"></i></p>
+							
+							<div id="dd" class="wrapper-dropdown-5" tabindex="1" style="float: right !important;">John Doe
+								<ul class="dropdown">
+									<li><a href="#"><i class="icon-user"></i>Profile</a></li>
+									<li><a href="#"><i class="icon-cog"></i>Settings</a></li>
+									<li><a href="#"><i class="icon-remove"></i>Log out</a></li>
+								</ul>
+							</div>
+							<br />
+							<br />
 
 						</div>
 						
@@ -158,28 +134,14 @@
 					</section>
 
 				<!-- Answers -->
-					<section id="answers" class="four">
+					<section id="coursehelp" class="four">
 						<div class="container">
 
 							<header>
-								<h2>Answers (Feature Coming Soon)</h2>
+								<h2>Course Help</h2>
 							</header>
 
-							<p>Use this search box to ask and get answers to any of the questions. Just copy and paste the question from the quiz into the search box below. It's that simple!</p>
-
-							<input type="text" id="searchBox" onkeyup="search()" placeholder="Search for answers..." title="Type in a question.">
-
-							<ul id="searchResults" style="display: none;">
-								<li><a href="#">Adele</a></li>
-								<li><a href="#">Agnes</a></li>
-
-								<li><a href="#">Billy</a></li>
-								<li><a href="#">Bob</a></li>
-
-								<li><a href="#">Calvin</a></li>
-								<li><a href="#">Christina</a></li>
-								<li><a href="#">Cindy</a></li>
-							</ul>
+							<p>Use these presentations to learn the in's and out's of uCertify, OneDrive, Office365, and this course in general! Click a thumbnail to get started.</p>
 
 						</div>
 						
@@ -194,7 +156,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>View on <a href="https://github.com/OrigamiYoda729/Private3/" target="_blank"><i class="fa fa-github"></i> GitHub</a></li><li>Template Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						<li>View the source code on <a href="https://github.com/OrigamiYoda729/Private3/" target="_blank"><i class="fa fa-github"></i> GitHub</a></li><li>Template Design: <a href="http://html5up.net" target="_blank">HTML5 UP!</a></li>
 					</ul>
 
 			</div>

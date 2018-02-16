@@ -37,7 +37,7 @@
 	
 	.wrapper-dropdown-5 {
 		position: relative;
-		width: 50%;
+		width: 40%;
 		margin: 0 auto;
 		padding: 12px 15px;
 		background: #efefef;
@@ -48,6 +48,7 @@
 		transition: all 0.3s ease-out;
 		font-style: 'Source-Sans-Pro', sans-serif;
 		font-weight: 500;
+		float: left;
 	}
 
 	.wrapper-dropdown-5:after {
@@ -86,7 +87,7 @@
 	.wrapper-dropdown-5 .dropdown li a {
 		display: block;
 		text-decoration: none;
-		color: #444;
+		color: #666;
 		padding: 10px 0;
 		transition: all 0.3s ease-out;
 		border-bottom: 1px solid #E27689;
@@ -103,7 +104,7 @@
 	}
 
 	.wrapper-dropdown-5 .dropdown li:hover a {
-		color: #000;
+		color: #111;
 	}
 	
 	.wrapper-dropdown-5.active {
