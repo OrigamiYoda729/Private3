@@ -21,3 +21,53 @@
 			document.getElementsByClassName("img-auth")[i].src = profileImage;
 		}
 	}
+	
+	function search() {
+		var input, filter, ul, li, a, i;
+		input = document.getElementById("searchBox");
+		filter = input.value.toUpperCase();
+		ul = document.getElementById("searchResults");
+		li = ul.getElementsByTagName("li");
+		
+		if (input.value != null && input.value != "") {
+			ul.style.display = "";    	
+		} else {
+			ul.style.display = "none";	
+		}
+		
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("a")[0];
+			if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				li[i].style.display = "";
+			} else {
+				li[i].style.display = "none";
+
+			}
+		}
+	}
+
+	function DropDown(el) {
+		this.dd = el;
+		this.initEvents();
+	}
+	DropDown.prototype = {
+		initEvents : function() {
+			var obj = this;
+
+			obj.dd.on('click', function(event){
+				$(this).toggleClass('active');
+				event.stopPropagation();
+			});	
+		}
+	}
+
+	$(function() {
+
+		var dd = new DropDown( $('#dd') );
+
+		$(document).click(function() {
+			// all dropdowns
+			$('.wrapper-dropdown-5').removeClass('active');
+		});
+
+	});
