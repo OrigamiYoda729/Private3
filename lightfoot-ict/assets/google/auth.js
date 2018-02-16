@@ -7,11 +7,13 @@
 		console.log('Name: ' + profile.getName());
 		console.log('Image URL: ' + profile.getImageUrl());
 		console.log('Email: ' + profile.getEmail());
+		var data = [profile.getId(), profile.getName(), profile.getImageUrl(), profile.getEmail()];
 		
 		$('#main-content').show();
 		$('#gConnect').hide();
 		
-		document.getElementById("main-content").contentWindow.loggedin()
+		var frame = document.getElementById("main-content").contentWindow;
+		frame.loggedin(data)
 	}
 	
 	function signOut() {
