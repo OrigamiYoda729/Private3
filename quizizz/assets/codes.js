@@ -169,23 +169,26 @@
 		parent.location.href = "redirect.html?game=" + cgame;
 	}
 	
-	var x;
-	var y;
-	var game;
-	var error;
-	var games = ["multimedia-1", "multimedia-2", "multimedia-r1", "multimedia-r2", "programming-1", "programming-2", "programming-3", "programming-4", "programming-5", "programming-6", "programming-r1", "programming-r2", "webdesign-1", "webdesign-2", "webdesign-3", "webdesign-4", "webdesign-r1", "webdesign-r2", "gaming-1", "gaming-2", 	"gaming-3", "gaming-4", "gaming-r1", "gaming-r2", "iba-1", "iba-2", "iba-3", "iba-4", "iba-5", "iba-6", "iba-7", "iba-8", "iba-9", "iba-10", "iba-r1", "iba-r2", "iba-r3"];
-	var subjects = ["multimedia", "programming", "webdesign", "gaming", "iba"];
-	var types = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "r1", "r2", "r3"];
-	
-	for (var i = 0; i < games.length; i++) {
-		for (var h = 0; h < subjects.length; h++) {
-			for (var j = 0; j < types.length; j++) {
-				x = subjects[h] + "-" +   types[j];
-				if (x == games[i]) {
-					y = getCode(x);
-					if (y == "000000") {
-						document.getElementById(x).className += " disabled";
-						document.getElementById(x).disabled = "true";
+	function disable() {
+		var x;
+		var y;
+		var game;
+		var error;
+		var games = ["multimedia-1", "multimedia-2", "multimedia-r1", "multimedia-r2", "programming-1", "programming-2", "programming-3", "programming-4", "programming-5", "programming-6", "programming-r1", "programming-r2", "webdesign-1", "webdesign-2", "webdesign-3", "webdesign-4", "webdesign-r1", "webdesign-r2", "gaming-1", "gaming-2", 	"gaming-3", "gaming-4", "gaming-r1", "gaming-r2", "iba-1", "iba-2", "iba-3", "iba-4", "iba-5", "iba-6", "iba-7", "iba-8", "iba-9", "iba-10", "iba-r1", "iba-r2", "iba-r3"];
+		var subjects = ["multimedia", "programming", "webdesign", "gaming", "iba"];
+		var types = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "r1", "r2", "r3"];
+		
+		for (var i = 0; i < games.length; i++) {
+			for (var h = 0; h < subjects.length; h++) {
+				for (var j = 0; j < types.length; j++) {
+					x = subjects[h] + "-" +   types[j];
+					if (x == games[i]) {
+						y = getCode(x);
+						alert(x);
+						if (y == "000000") {
+							document.getElementById(x).className += " disabled";
+							document.getElementById(x).disabled = "true";
+						}
 					}
 				}
 			}
