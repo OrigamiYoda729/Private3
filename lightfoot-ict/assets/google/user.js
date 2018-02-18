@@ -233,7 +233,7 @@
 		body.className = "blur";
 	}
 	
-	function clodeModal() {
+	function closeModal() {
 		modal.style.display = "none";
 		body.className = "";
 	}
