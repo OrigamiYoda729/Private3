@@ -14,13 +14,13 @@
 		margin-bottom: 12px;
 	}
 
-	#searchResults {
+	.searchResults {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
 	}
 
-	#searchResults li a {
+	.searchResults li a {
 		border: 1px solid #ddd;
 		margin-top: -1px;
 		background-color: #f6f6f6;
@@ -31,7 +31,7 @@
 		display: block
 	}
 
-	#searchResults li a:hover:not(.header) {
+	.searchResults li a:hover:not(.header) {
 		background-color: #eee;
 	}
 	

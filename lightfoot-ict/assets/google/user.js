@@ -27,7 +27,19 @@
 		input = document.getElementById("searchBox");
 		filter = input.value.toUpperCase();
 		ul = document.getElementById("searchResults");
-		li = ul.getElementsByTagName("li");
+		li = ul.getElementsByClassName("result");
+		
+		if (input.value != "") {
+			document.getElementById("no-show").style.display = "";
+		} else {
+			document.getElementById("no-show").style.display = "none";
+		}
+		
+		if (input.value != "") {
+			document.getElementById("result-overflow").style.display = "";
+		} else {
+			document.getElementById("result-overflow").style.display = "none";
+		}
 		
 		for (i = 0; i < li.length; i++) {
 			a = li[i].getElementsByTagName("a")[0];
@@ -35,9 +47,13 @@
 				li[i].style = "display: ";
 			} else {
 				li[i].style = "display: none";
-
 			}
 		}
+	}
+	
+	function googleSearch() {
+		var input = document.getElementById("searchBox");
+		href('https://www.google.com/search?q=' + input.value.replace(" ", "+"));
 	}
 
 	function DropDown(el) {
