@@ -204,26 +204,32 @@
 				<!-- Modal content -->
 					<div class="modal-content" style="text-align: center; font-weight: 500; padding: 25px;">
 						<span class="close">&times;</span>
-						<h2 id="modal-header" style="margin-bottom: 15px; font-weight: 500;">Play {quizSubject} {quizLesson} on Quizizz?</h2>
-						<hr style="border-top: solid 1.5px #666; width: 80%; margin-bottom: 15px;"/>
-						
-						<p id="message1" style="display: none;">To play this quiz, navigate to <a href="https://join.quizizz.com/">https://join.quizizz.com/</a> and use the game code <a href="javascript:void(0)" onclick="copy(this)" id="gamecode">------</a> (click to copy).<br /><br />- OR -</p>
-						<p id="message2" style="display: none;">Unfortunately, this quiz isn't currently online. I'm really sorry for any inconveniences this caused!</p>		
-						<p id="message3" style="display: none;">Unfortunately, this quiz finished yet. Nag me all you want... I'm really sorry for any inconveniences this caused!</p>						
-						
-						<div id="controls1" style="display: none;">
-							<button class="modal-special" onclick="href('#')"><i class="fa fa-sign-in"></i> &nbsp;Join Game</button>
-							<br />
-							<button class="modal-boring" style="margin-right: 0;" onclick="href('#')"><i class="fa fa-print"></i> &nbsp;Printable Quiz</button>
-							<button class="modal-boring" style="margin-left: 1.5%;" onclick="href('#')"><i class="fa fa-question"></i> &nbsp;Quizizz Suggestions</button>
+						<div id="modal-display1" style="display: none">
+							<h2 id="modal-header1" style="margin-bottom: 15px; font-weight: 500;">Play {quizSubject} {quizLesson} on Quizizz?</h2>
+							<hr style="border-top: solid 1.5px #666; width: 80%; margin-bottom: 15px;"/>
+							
+							<p id="message1" style="display: none;">To play this quiz, navigate to <a href="https://join.quizizz.com/">https://join.quizizz.com/</a> and use the game code <a href="javascript:void(0)" onclick="copy(this)" id="gamecode">------</a> (click to copy).</p>
+							<p id="message2" style="display: none;">Unfortunately, this quiz isn't currently online. I'm really sorry for any inconveniences this caused!</p>		
+							<p id="message3" style="display: none;">Unfortunately, this quiz finished yet. Nag me all you want... I'm really sorry for any inconveniences this caused!</p>						
+							
+							<div id="controls1" style="display: none;">
+								<a href="https://google.com/" target="_blank"  id="joinGameBtn"><button class="modal-special"><i class="fa fa-sign-in"></i> &nbsp;Join Game</button></a>
+								<br />
+								<a href="#" target="_blank" id="printQuizBtn"><button class="modal-boring" style="margin-right: 0;"><i class="fa fa-print"></i> &nbsp;Printable Quiz</button></a>
+								<button class="modal-boring" style="margin-left: 1.5%;" onclick="href('http://bit.ly/suggest-quizizz')"><i class="fa fa-question"></i> &nbsp;Quizizz Suggestions</button>
+							</div>
+							<div id="controls2" style="display: none;">
+								<button class="modal-combo" style="margin-right: 0;" onclick="location.href='mailto:171053015@edu.leonschools.net'"><i class="fa fa-envelope"></i> &nbsp;Annoy Sloan until he gets it Online!</button>
+								<a href="#" target="_blank" id="printQuizBtn2"><button class="modal-boring" style="margin-left: 1.5%; width: 29%;"><i class="fa fa-print"></i> &nbsp;Printable Quiz</button></a>
+							</div>
+							<div id="controls3" style="display: none;">
+								<button class="modal-combo" style="margin-right: 0;" onclick="location.href='mailto:171053015@edu.leonschools.net'"><i class="fa fa-envelope"></i> &nbsp;Annoy Sloan until he gets it Finished!</button>
+								<button class="modal-boring" style="margin-left: 1.5%; width: 29%;" onclick="closeModal()"><i class="fa fa-close"></i> &nbsp;Close</button>
+							</div>
 						</div>
-						<div id="controls2" style="display: none;">
-							<button class="modal-combo" style="margin-right: 0;" onclick="location.href='mailto:171053015@edu.leonschools.net'"><i class="fa fa-envelope"></i> &nbsp;Annoy Sloan until he gets it Online!</button>
-							<button class="modal-boring" style="margin-left: 1.5%; width: 29%;"><i class="fa fa-print"></i> &nbsp;Printable Quiz</button>
-						</div>
-						<div id="controls3" style="display: none;">
-							<button class="modal-combo" style="margin-right: 0;" onclick="location.href='mailto:171053015@edu.leonschools.net'"><i class="fa fa-envelope"></i> &nbsp;Annoy Sloan until he gets it Finished!</button>
-							<button class="modal-boring" style="margin-left: 1.5%; width: 29%;" onclick="href('#')"><i class="fa fa-close"></i> &nbsp;Close Modal</button>
+						
+						<div id="modal-display2">
+							<h3 id="modal-header2" style="font-weight: 500;">Please Select a Game.</h3>
 						</div>
 					</div>
 

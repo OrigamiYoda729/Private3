@@ -175,14 +175,67 @@
 		
 	}
 	
+	function selectOk() {
+		document.getElementById("modal-display1").style.display = "";
+		document.getElementById("modal-display2").style.display = "none";
+	}
+	
 	var modal = document.getElementById('modal');
 	var btn = document.getElementById("myBtn");
 	var span = document.getElementsByClassName("close")[0];
 	var body = document.getElementById("content");
 
 	function openModal() {
+		var x1 = document.getElementsByClassName("dd-header")[0].innerHTML.toLowerCase();
+		var x2 = document.getElementsByClassName("dd-header")[1].innerHTML.split(" ")[1];
+		if (x2 == "(from") { x2 = "r" + (document.getElementsByClassName("dd-header")[1].innerHTML.split(" ")[3].split(".")[0] - 1).toString(); };
+		var x = x1 + "-" + x2;
+		var gcode = getCode(x);
+		
+		if (gcode != 0 && gcode != "000000" && gcode != "XXXXXX" && gcode != "undefined" && gcode != undefined && x2 != "a") { 
+			selectOk();
+			document.getElementById("message2").style.display = "none";
+			document.getElementById("controls2").style.display = "none";
+			document.getElementById("message3").style.display = "none";
+			document.getElementById("controls3").style.display = "none";
+			document.getElementById("modal-header1").innerHTML = document.getElementById("modal-header1").innerHTML.replace("{quizSubject}", document.getElementsByClassName("dd-header")[0].innerHTML).replace("{quizLesson}", document.getElementsByClassName("dd-header")[1].innerHTML);
+			document.getElementById("gamecode").innerHTML = document.getElementsByClassName("q")[1].innerHTML;
+			document.getElementById("joinGameBtn").href = "https://origamiyoda729.github.io/Private3/quizizz/default.html?gc=" + gcode;
+			document.getElementById("printQuizBtn").href = "http://bit.ly/print-quizizz#" + x;
+			document.getElementById("message1").style.display = "";
+			document.getElementById("controls1").style.display = "";
+		} else 
+		if (gcode == "XXXXXX" || gcode == "undefined" || gcode == undefined && x2 != "a") {
+			selectOk();
+			document.getElementById("modal-header1").innerHTML = document.getElementById("modal-header1").innerHTML.replace("{quizSubject}", document.getElementsByClassName("dd-header")[0].innerHTML).replace("{quizLesson}", document.getElementsByClassName("dd-header")[1].innerHTML);
+			document.getElementById("message1").style.display = "none";
+			document.getElementById("controls1").style.display = "none";
+			document.getElementById("message2").style.display = "none";
+			document.getElementById("controls2").style.display = "none";
+			document.getElementById("message3").style.display = "";
+			document.getElementById("controls3").style.display = "";
+		} else 
+		if (gcode == "000000" || gcode == 0 && x2 != "a") {
+			selectOk();
+			document.getElementById("modal-header1").innerHTML = document.getElementById("modal-header1").innerHTML.replace("{quizSubject}", document.getElementsByClassName("dd-header")[0].innerHTML).replace("{quizLesson}", document.getElementsByClassName("dd-header")[1].innerHTML);
+			document.getElementById("message1").style.display = "none";
+			document.getElementById("controls1").style.display = "none";
+			document.getElementById("message3").style.display = "none";
+			document.getElementById("controls3").style.display = "none";
+			document.getElementById("printQuizBtn2").href = "http://bit.ly/print-quizizz#" + x;
+			document.getElementById("message2").style.display = "";
+			document.getElementById("controls2").style.display = "";
+		}
+		
+		document.getElementsByClassName("q")[1].innerHTML
+		
 		modal.style.display = "block";
 		body.className = "blur";
+	}
+	
+	function clodeModal() {
+		modal.style.display = "none";
+		body.className = "";
 	}
 	
 	span.onclick = function() {
@@ -204,7 +257,8 @@
 			document.getElementsByClassName("q")[1].innerHTML = gc;
 		} else 
 		if (gc == "XXXXXX") {
-			alert("woah. six times.");
+			document.getElementsByClassName("dd-header")[1].innerHTML = document.getElementById(id).getElementsByTagName("a")[0].innerHTML;
+			document.getElementsByClassName("q")[1].innerHTML = "------";
 		} else {
 			document.getElementsByClassName("dd-header")[1].innerHTML = document.getElementById(id).getElementsByTagName("a")[0].innerHTML;
 			document.getElementsByClassName("q")[1].innerHTML = "------";
