@@ -159,7 +159,7 @@
 		// extreme
 			if (game == "extreme-1") {   // part 1
 				error = "invalid";
-				return "XXXXXX";
+				return "893827";
 			} else
 			if (game == "extreme-2") {   // part 2
 				error = "false";
