@@ -112,7 +112,7 @@
 			
 		// iba
 			if (game == "learn-1") {   // lesson 1
-				error = "invalid";
+				error = "false";
 				return "XXXXXX";
 			} else
 			if (game == "learn-2") {   // lesson 2
@@ -158,40 +158,40 @@
 				
 		// extreme
 			if (game == "extreme-1") {   // part 1
-				error = "invalid";
+				error = "false";
 				return "893827";
 			} else
 			if (game == "extreme-2") {   // part 2
 				error = "false";
-				return "XXXXXX";
+				return "192509";
 			} else
 			if (game == "extreme-3") {   // part 3
 				error = "false";
-				return "XXXXXX";
+				return "863075";
 			} else
 			if (game == "extreme-4") {   // part 4
 				error = "false";
-				return "XXXXXX";
+				return "236589";
 			} else
 			if (game == "extreme-5") {   // part 5
 				error = "false";
-				return "XXXXXX";
+				return "166377";
 			} else
 			if (game == "extreme-6") {   // part 6
 				error = "false";
-				return "XXXXXX";
+				return "185821";
 			} else
 			if (game == "extreme-7") {   // part 7
 				error = "false";
-				return "XXXXXX";
+				return "067263";
 			} else
 			if (game == "extreme-8") {   // part 8
 				error = "false";
-				return "XXXXXX";
+				return "706354";
 			} else
 			if (game == "extreme-c1") {   // custom review
 				error = "false";
-				return "000000";
+				return "XXXXXX";
 			} else
 			
 			if (game == "true") {
