@@ -111,58 +111,88 @@
 			} else
 			
 		// iba
-			if (game == "iba-1") {   // lesson 1
+			if (game == "learn-1") {   // lesson 1
 				error = "invalid";
 				return "XXXXXX";
 			} else
-			if (game == "iba-2") {   // lesson 2
+			if (game == "learn-2") {   // lesson 2
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-3") {   // lesson 3
+			if (game == "learn-3") {   // lesson 3
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-4") {   // lesson 4
+			if (game == "learn-4") {   // lesson 4
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-5") {   // lesson 5
+			if (game == "learn-5") {   // lesson 5
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-6") {   // lesson 6
+			if (game == "learn-6") {   // lesson 6
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-7") {   // lesson 7
+			if (game == "learn-7") {   // lesson 7
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-8") {   // lesson 8
+			if (game == "learn-8") {   // lesson 8
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-9") {   // lesson 9
+			if (game == "learn-9") {   // lesson 9
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-10") {   // lesson 10
+			if (game == "learn-10") {   // lesson 10
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-r1") {   // review v1
+			if (game == "learn-r1") {   // review v1
 				error = "false";
 				return "000000";
 			} else
-			if (game == "iba-r2") {   // review v2
+				
+		// extreme
+			if (game == "extreme-1") {   // part 1
+				error = "invalid";
+				return "XXXXXX";
+			} else
+			if (game == "extreme-2") {   // part 2
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "iba-r3") {   // review v3
+			if (game == "extreme-3") {   // part 3
 				error = "false";
 				return "XXXXXX";
-			}
+			} else
+			if (game == "extreme-4") {   // part 4
+				error = "false";
+				return "XXXXXX";
+			} else
+			if (game == "extreme-5") {   // part 5
+				error = "false";
+				return "XXXXXX";
+			} else
+			if (game == "extreme-6") {   // part 6
+				error = "false";
+				return "XXXXXX";
+			} else
+			if (game == "extreme-7") {   // part 7
+				error = "false";
+				return "XXXXXX";
+			} else
+			if (game == "extreme-8") {   // part 8
+				error = "false";
+				return "XXXXXX";
+			} else
+			if (game == "extreme-c1") {   // custom review
+				error = "false";
+				return "000000";
+			} else
 			
 			if (game == "true") {
 				return "invalid";

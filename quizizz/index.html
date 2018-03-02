@@ -5638,6 +5638,12 @@
 		
 	</style>
 	<script src="https://use.fontawesome.com/4db924c22d.js"></script>
+	<script>
+		var dev = window.location.hash.substr(1);
+		if (dev != "dev") {
+			location.href = "../../lightfoot/iba";
+		}
+	</script>
   </head>
 
   <body onload="disable()">
