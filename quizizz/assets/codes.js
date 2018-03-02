@@ -195,7 +195,7 @@
 			} else
 			if (game == "extreme-c1") {   // custom review
 				error = "false";
-				return "XXXXXX";
+				return "679223";
 			} else
 			
 			if (game == "true") {
