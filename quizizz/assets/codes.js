@@ -151,7 +151,11 @@
 				error = "false";
 				return "XXXXXX";
 			} else
-			if (game == "learn-r1") {   // review v1
+			if (game == "learn-r1") {   // review from ucertify
+				error = "false";
+				return "000000";
+			} else
+			if (game == "learn-r2") {   // custom review
 				error = "false";
 				return "000000";
 			} else
