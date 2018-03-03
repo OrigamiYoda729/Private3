@@ -1,0 +1,61 @@
+<!DOCTYPE html>	
+<html>
+	<head>
+	<title>Edit Code</title>
+	<style>
+		body {
+			background-color: #f0f0f0;
+		}
+		#code{
+			resize: none;
+			height: 100%;
+			width: 100%; 
+			margin: 0;
+			border: none;
+			font-family: monospace;
+		}
+	</style>
+	</head>
+	<body style="overflow: hidden" onload="placeholder1()">
+		<p id="code" onkeyup="update()" onclick="placeholder0()" onfocusout="placeholder1()" contenteditable="true">Click to Edit Code</p>
+		<script type="text/javascript">
+			function update() {
+				if (window.opener != null && !window.opener.closed) {
+					var frame = window.opener.document.getElementById("frame");
+					var code1 = document.getElementById("code").innerHTML;
+					
+					if (code1 != "Click to Edit Code") {
+						document.getElementById("code").style = "opacity: 1;";
+					}
+					
+					code0 = document.getElementById("code").innerHTML;
+					code0 = code0.replace(new RegExp("&lt;", "g"), "<");
+					code0 = code0.replace(new RegExp("&gt;", "g"), ">");
+					code = code0.replace(new RegExp("Click to Edit Code", "g"), "");
+					frame.innerHTML = code;
+				}
+			}
+			
+			function placeholder0() {
+				var code1 = document.getElementById("code").innerHTML;
+				
+				if (code1 == "Click to Edit Code") {
+					document.getElementById("code").innerHTML = "";
+				}
+				
+			}
+			
+			function placeholder1() {
+				var code1 = document.getElementById("code").innerHTML;
+				
+				if (code1 == "") {
+					document.getElementById("code").innerHTML = "Click to Edit Code";
+				}			
+				
+				if (code1 == "Click to Edit Code") {
+					document.getElementById("code").style = "opacity: 0.6;";
+				}			
+			}
+		</script>
+	</body>
+</html>

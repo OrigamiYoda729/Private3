@@ -1,0 +1,31 @@
+<script src="jquery.min.js"></script>
+<script>
+
+	function update() {
+		var code = document.getElementById("code").value;
+		document.getElementById("frame").src = "test2.html?code=" + code;
+	}
+	 
+	function save() {
+		var x = document.getElementById("frame").src;
+		
+		$.getJSON('http://api.bitly.com/v3/shorten?callback=?',
+			{
+				format: "json",
+				apiKey: "R_2850f6a5864e47d5804aa220f66f9819",
+				login: "origamiyoda729",
+				longUrl: x,
+			},
+			function(response) {
+				var shortURL = response.data.url;
+				alert(x);
+			}
+		);
+		
+	}
+		
+	
+</script>
+<button onclick="save()" style="height: 3%">Save</button>
+<textarea id="code" onkeyup="update()" style="resize: none; height: 47%; width: 100%; margin: 0;"></textarea>
+<iframe src="test2.html" id="frame" style="height: 50%; width: 100%; margin: 0; border: none;"></iframe>
