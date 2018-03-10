@@ -5,7 +5,7 @@
 		// mutlimedia
 			if (game == "multimedia-1") {   // lesson 1
 				error = "false";
-				return "255660";
+				return "116793";
 			} else
 			if (game == "multimedia-2") {   // lesson 2
 				error = "false";
@@ -17,7 +17,7 @@
 			} else
 			if (game == "multimedia-r1") {   // lesson v1
 				error = "false";
-				return "005384";
+				return "097073";
 			} else
 			if (game == "multimedia-r2") {   // review v2
 				error = "false";
@@ -51,7 +51,7 @@
 			} else
 			if (game == "programming-r1") {   // lesson v1
 				error = "false";
-				return "120417";
+				return "669989";
 			} else
 			if (game == "programming-r2") {   // review v2
 				error = "false";
@@ -77,7 +77,7 @@
 			} else
 			if (game == "webdesign-r1") {   // lesson v1
 				error = "false";
-				return "660546";
+				return "563247";
 			} else
 			if (game == "webdesign-r2") {   // review v2
 				error = "false";
@@ -103,7 +103,7 @@
 			} else
 			if (game == "gaming-r1") {   // review v1
 				error = "false";
-				return "061782";
+				return "079466";
 			} else
 			if (game == "gaming-r2") {   // review v2
 				error = "false";
@@ -113,7 +113,7 @@
 		// iba
 			if (game == "learn-1") {   // lesson 1
 				error = "false";
-				return "824747";
+				return "291796";
 			} else
 			if (game == "learn-2") {   // lesson 2
 				error = "false";
@@ -157,33 +157,33 @@
 			} else
 			if (game == "learn-r2") {   // custom review
 				error = "false";
-				return "851889";
+				return "419918";
 			} else
 				
 		// extreme
 			if (game == "extreme-1") {   // part 1
 				error = "false";
-				return "893827";
+				return "933531";
 			} else
 			if (game == "extreme-2") {   // part 2
 				error = "false";
-				return "192509";
+				return "708032";
 			} else
 			if (game == "extreme-3") {   // part 3
 				error = "false";
-				return "863075";
+				return "878321";
 			} else
 			if (game == "extreme-4") {   // part 4
 				error = "false";
-				return "236589";
+				return "265333";
 			} else
 			if (game == "extreme-5") {   // part 5
 				error = "false";
-				return "166377";
+				return "07964";
 			} else
-			if (game == "extreme-6") {   // part 6
+			if (game == "extreme-6") {   // part 6 -- start
 				error = "false";
-				return "185821";
+				return "890993";
 			} else
 			if (game == "extreme-7") {   // part 7
 				error = "false";
