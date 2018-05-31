@@ -158,10 +158,7 @@
 							// Show message.
 								$message._show('success', 'Success');
 								
-								var d = new Date();
-								d.setTime(d.getTime() + (90*24*60*60*1000));
-								var expires = "expires=" + d.toGMTString();
-								document.cookie = "key=" + document.getElementById('password').value + ";" +  + ";path=/";
+								document.cookie = "key=" + document.getElementById('password').value + ";path=/";
 								
 								window.setTimeout(function() {
 									location.href = "../login/index.html";
