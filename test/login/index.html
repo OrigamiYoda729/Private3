@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+		<!-- Page Meta -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title>Login</title>
+		
+		<!-- Styles -->
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Login</h1>
+		</header>
+
+		<!-- Login Form -->
+		<form id="signup-form" method="post" action="#">
+			<input type="email" name="email" id="email" placeholder="Email" />
+			<input type="submit" value="Login" />
+		</form>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="copyright">
+				<li>&copy; 2018 UBM</li><li>Design Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/main.js"></script>
+		<script>
+			var name = "key=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					console.log(c.substring(name.length, c.length));
+				}
+			}
+		</script>
+
+	</body>
+</html>
