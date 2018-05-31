@@ -158,8 +158,6 @@
 							// Show message.
 								$message._show('success', 'Success');
 								
-								document.cookie = "key=" + document.getElementById('password').value + ";path=/";
-								
 								window.setTimeout(function() {
 									location.href = "../login/index.html";
 								}, 750);
