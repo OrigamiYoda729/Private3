@@ -5,7 +5,7 @@
 		<!-- Page Meta -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<title>Login</title>
+		<title>Manage Account</title>
 		
 		<!-- Styles -->
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,20 +14,19 @@
 
 		<!-- Header -->
 		<header id="header">
-			<h1>Login</h1>
+			<h1>Manage Account</h1>
 		</header>
 
-		<!-- Login Form -->
-		<form id="signup-form" method="post" action="#">
-			<input type="email" name="email" id="email" placeholder="Email" />
-			<input type="password" name="password" id="password" placeholder="Password" />
-			<input type="submit" value="Login" />
+		<!-- Reset Password Form -->
+		<form id="signup-form">
+			<input type="text" name="set" id="number" placeholder="Account Value" />
+			<input type="submit" value="Save" onclick="amount($(this).prev())" />
 		</form>
 
 		<!-- Footer -->
 		<footer id="footer">
 			<ul class="copyright">
-				<li>&copy; 2018 UBM</li><li>Design Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				<li><a href="javascript:void(0)" id="logout">Logout</a></li><li>&copy; 2018 UBM</li><li>Design Credits: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
 		</footer>
 
